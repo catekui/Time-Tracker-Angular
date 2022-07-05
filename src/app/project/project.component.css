@@ -1,0 +1,34 @@
+.sidebar {
+    height: 100vh;
+    width: 210px;
+    padding: 6px 14px;
+    background: #E3F0FB;
+}
+
+.sidebar li {
+    list-style: none;
+    height: 50px;
+    line-height: 50px;
+    width: 100%;
+    position: relative;
+    margin: 0 5px;
+    border-radius: 12px;
+}
+.sidebar li a {
+    color: black;
+    display: flex;
+    align-items: center;
+    text-decoration: none; 
+    transition: all 0.4s ease; 
+}
+.sidebar li a:hover{
+    color: #BDE0FE;
+    background: #fff;
+
+}
+.sidebar li a i {
+    height: 50px;
+    min-width: 50px;
+    border-radius: 12px;
+    line-height: 50px;
+} 
