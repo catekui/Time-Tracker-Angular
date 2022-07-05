@@ -1,0 +1,29 @@
+body{
+    position: relative;
+    min-height: 100vh;
+}
+.sidebar {
+    height: 100%;
+    width: 240px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 6px 14px;
+    background: #E3F0FB;
+}
+.sidebar .logo_content .logo{
+    color: rgb(14, 0, 0);
+    display: flex;
+    height: 50px;
+    width: 100%;
+    align-items: center;
+}
+.logo_content .logo i {
+    font-size: 28px;
+    margin-right: 5px;
+
+}
+.logo_content .logo logo_name {
+    font-size: 20px;
+    font-weight: 400;
+}
