@@ -29,13 +29,15 @@
             "styles": [
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [ 
+              "src/assets/js/timer.js"
+            ]
           },
           "configurations": {
             "production": {
               "budgets": [
                 {
-                  "type": "initial",
+                  "type": "initial", 
                   "maximumWarning": "500kb",
                   "maximumError": "1mb"
                 },
@@ -96,11 +98,13 @@
             "styles": [
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [
+            ]
           }
         }
       }
     }
   },
   "defaultProject": "timetracker"
+  
 }

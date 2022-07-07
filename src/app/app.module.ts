@@ -3,19 +3,19 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { NavbarComponent } from './navbar/navbar.component';
 import { ProjectComponent } from './project/project.component';
+import { TimerComponent } from './timer/timer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    NavbarComponent,
-    ProjectComponent
+    ProjectComponent,
+    TimerComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule
-  ],
+  ], 
   providers: [],
   bootstrap: [AppComponent]
 })
