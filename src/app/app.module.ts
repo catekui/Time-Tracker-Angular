@@ -22,11 +22,11 @@ import { LandingpageComponent } from './landingpage/landingpage.component';
 
     ReportComponent,
     ProjectFormComponent,
-    ProjComponent
+    ProjComponent,
 
     LoginComponent,
     RegisterComponent,
-    LandingpageComponent
+    LandingpageComponent,
 
   ],
   imports: [
