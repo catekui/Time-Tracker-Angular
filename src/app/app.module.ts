@@ -16,10 +16,13 @@ import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { LandingpageComponent } from './landingpage/landingpage.component';
 
+import { ProjectComponent } from './project/project.component';
+import { TimerComponent } from './timer/timer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
+<<<<<<< HEAD
 
     ReviewsComponent,
 
@@ -39,6 +42,15 @@ import { LandingpageComponent } from './landingpage/landingpage.component';
     AppRoutingModule,
     ReactiveFormsModule,
   ],
+=======
+    ProjectComponent,
+    TimerComponent,
+  ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule
+  ], 
+>>>>>>> d5c8ccabff000f301ebe4e9fea5103cb0bd45cff
   providers: [],
   bootstrap: [AppComponent]
 })
