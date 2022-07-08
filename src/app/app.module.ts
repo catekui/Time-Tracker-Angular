@@ -18,6 +18,7 @@ import { LandingpageComponent } from './landingpage/landingpage.component';
 
 import { ProjectComponent } from './project/project.component';
 import { TimerComponent } from './timer/timer.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
 @NgModule({
   declarations: [
@@ -35,6 +36,7 @@ import { TimerComponent } from './timer/timer.component';
     LandingpageComponent,
     ProjectComponent,
     TimerComponent,
+    NavbarComponent,
 
   ],
   imports: [
