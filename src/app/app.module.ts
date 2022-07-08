@@ -36,7 +36,6 @@ import { TimerComponent } from './timer/timer.component';
     ProjectComponent,
     TimerComponent,
 
-
   ],
   imports: [
     BrowserModule,
