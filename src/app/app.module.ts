@@ -6,6 +6,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { ReviewsComponent } from './components/reviews/reviews.component';
 
 import { ReportComponent } from './components/report/report.component';
 import { ProjectFormComponent } from './components/project-form/project-form.component';
@@ -20,6 +21,9 @@ import { LandingpageComponent } from './landingpage/landingpage.component';
   declarations: [
     AppComponent,
 
+    ReviewsComponent,
+
+
     ReportComponent,
     ProjectFormComponent,
     ProjComponent,
@@ -27,6 +31,7 @@ import { LandingpageComponent } from './landingpage/landingpage.component';
     LoginComponent,
     RegisterComponent,
     LandingpageComponent,
+
 
   ],
   imports: [
