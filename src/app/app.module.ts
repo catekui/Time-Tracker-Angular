@@ -22,7 +22,6 @@ import { TimerComponent } from './timer/timer.component';
 @NgModule({
   declarations: [
     AppComponent,
-<<<<<<< HEAD
 
     ReviewsComponent,
 
@@ -34,6 +33,8 @@ import { TimerComponent } from './timer/timer.component';
     LoginComponent,
     RegisterComponent,
     LandingpageComponent,
+    ProjectComponent,
+    TimerComponent,
 
 
   ],
@@ -41,16 +42,12 @@ import { TimerComponent } from './timer/timer.component';
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-  ],
-=======
-    ProjectComponent,
-    TimerComponent,
-  ],
-  imports: [
+
+   
+ 
     BrowserModule,
     AppRoutingModule
   ], 
->>>>>>> d5c8ccabff000f301ebe4e9fea5103cb0bd45cff
   providers: [],
   bootstrap: [AppComponent]
 })
