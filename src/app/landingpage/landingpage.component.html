@@ -4,83 +4,120 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
   <title>Document</title>
 </head>
-<body>
-  <div class="grid grid-cols-2 gap-4">
-
-    <div>
-      <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Time Tracker</h5>
-      <p class="font-normal text-gray-700 dark:text-gray-400">Bring your productivity a notch higher. Track time professionally.</p>
-      <div class="space-x-4">
-      <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-      Register
-      </button>
-      <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-      Login
-     </button>
-   </div>
-    </div>
-
-    <div>
-
-      <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white text-center">How to use the app</h5>
-
-      <div class="flex items-center">
-      <div class="rounded-full mx-32 bg-green-400 h-24 w-24
-                flex items-center justify-center">
-            1
+<body class="bg-blue-200">
+  <div class="grid grid-cols-2">
+    <!--First Column start-->
+    <div class="mt-64 px-20">
+      <h1 class="mb-2 text-7xl font-bold tracking-tight text-black dark:text-white">Time Tracker</h1>
+      <p class="font-normal text-2xl text-black dark:text-gray-400">Bring your productivity a notch higher. Track time professionally.</p>
+      <div class="space-x-8 mt-8">
+        <a routerLink="/register">
+        <button class="bg-pink-500 hover:bg-blue-400 text-white font-bold py-2 px-4 rounded">
+          Register
+        </button>
+        </a>
+        <a routerLink="/login">
+        <button class="bg-pink-500 hover:bg-blue-400 text-white font-bold py-2 px-6 rounded">
+          Login
+        </button>
+        </a>
       </div>
-      <h5>Login/Register</h5>
-      <i class="fa fa-arrow-down" aria-hidden="true"></i>
-
     </div>
+    <!--First column end-->
 
-    <div class="flex items-center">
-      <div class="rounded-full mx-32 bg-green-400 h-24 w-24
-        flex items-center justify-center">
-             2
+    <!--Second column start-->
+    <div>
+      <h5 class="mb-2 mt-36 text-4xl font-bold tracking-tight text-gray-900 dark:text-white text-center">How to use the app</h5>
+      <div class="grid grid-cols-2">
+        <!--First column-->
+        <div>
+          <div class="rounded-full mx-56 bg-pink-500 text-white h-20 w-20 flex items-center justify-center mb-0">1
+          </div>
+          <div class="mx-64">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" viewBox="0 0 320 512"><!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M9.375 329.4c12.51-12.51 32.76-12.49 45.25 0L128 402.8V32c0-17.69 14.31-32 32-32s32 14.31 32 32v370.8l73.38-73.38c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-128 128c-12.5 12.5-32.75 12.5-45.25 0l-128-128C-3.125 362.1-3.125 341.9 9.375 329.4z"/></svg>
+          </div>
+        </div>
+        <!--Second column-->
+        <h5 class="mt-5">Login/Register</h5>
       </div>
-     <h5>Projects Page</h5>
-    </div>
 
-    <div class="flex items-center">
-      <div class="rounded-full mx-32 bg-green-400 h-24 w-24
-                flex items-center justify-center">
-            3
+      <div class="grid grid-cols-2">
+        <!--First column-->
+        <div>
+          <div class="rounded-full mx-56 bg-pink-500 text-white h-20 w-20 flex items-center justify-center mb-0">2
+          </div>
+          <div class="mx-64">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" viewBox="0 0 320 512"><!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M9.375 329.4c12.51-12.51 32.76-12.49 45.25 0L128 402.8V32c0-17.69 14.31-32 32-32s32 14.31 32 32v370.8l73.38-73.38c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-128 128c-12.5 12.5-32.75 12.5-45.25 0l-128-128C-3.125 362.1-3.125 341.9 9.375 329.4z"/></svg>
+          </div>
         </div>
-        <h5>Add Project</h5>
-    </div>
+        <!--Second column-->
+        <h5 class="mt-5">Projects page</h5>
+      </div>
+      <div class="grid grid-cols-2">
+        <!--First column-->
+        <div>
+          <div class="rounded-full mx-56 bg-pink-500 text-white h-20 w-20 flex items-center justify-center mb-0">3
+          </div>
+          <div class="mx-64">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" viewBox="0 0 320 512"><!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M9.375 329.4c12.51-12.51 32.76-12.49 45.25 0L128 402.8V32c0-17.69 14.31-32 32-32s32 14.31 32 32v370.8l73.38-73.38c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-128 128c-12.5 12.5-32.75 12.5-45.25 0l-128-128C-3.125 362.1-3.125 341.9 9.375 329.4z"/></svg>
+          </div>
+        </div>
+        <!--Second column-->
+        <h5 class="mt-5">Add Project</h5>
+      </div>
+      <div class="grid grid-cols-2">
+        <!--First column-->
+        <div>
+          <div class="rounded-full mx-56 bg-pink-500 text-white h-20 w-20 flex items-center justify-center mb-0">4
+          </div>
+          <div class="mx-64">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" viewBox="0 0 320 512"><!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M9.375 329.4c12.51-12.51 32.76-12.49 45.25 0L128 402.8V32c0-17.69 14.31-32 32-32s32 14.31 32 32v370.8l73.38-73.38c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-128 128c-12.5 12.5-32.75 12.5-45.25 0l-128-128C-3.125 362.1-3.125 341.9 9.375 329.4z"/></svg>
+          </div>
+        </div>
+        <!--Second column-->
+        <h5 class="mt-5">Track</h5>
+      </div>
+      <div class="grid grid-cols-2">
+        <!--First column-->
+        <div>
+          <div class="rounded-full mx-56 bg-pink-500 text-white h-20 w-20 flex items-center justify-center mb-0">5
+          </div>
+          <div class="mx-64">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" viewBox="0 0 320 512"><!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M9.375 329.4c12.51-12.51 32.76-12.49 45.25 0L128 402.8V32c0-17.69 14.31-32 32-32s32 14.31 32 32v370.8l73.38-73.38c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-128 128c-12.5 12.5-32.75 12.5-45.25 0l-128-128C-3.125 362.1-3.125 341.9 9.375 329.4z"/></svg>
+          </div>
+        </div>
+        <!--Second column-->
+        <h5 class="mt-5">Take a break</h5>
+      </div>
+      <div class="grid grid-cols-2">
+        <!--First column-->
+        <div>
+          <div class="rounded-full mx-56 bg-pink-500 text-white h-20 w-20 flex items-center justify-center mb-0">6
+          </div>
+          <div class="mx-64">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" viewBox="0 0 320 512"><!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M9.375 329.4c12.51-12.51 32.76-12.49 45.25 0L128 402.8V32c0-17.69 14.31-32 32-32s32 14.31 32 32v370.8l73.38-73.38c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-128 128c-12.5 12.5-32.75 12.5-45.25 0l-128-128C-3.125 362.1-3.125 341.9 9.375 329.4z"/></svg>
+          </div>
+        </div>
+        <!--Second column-->
+        <h5 class="mt-5">Report</h5>
+      </div>
+      <div class="grid grid-cols-2">
+        <!--First column-->
+        <div>
+          <div class="rounded-full mx-56 bg-pink-500 text-white h-20 w-20 flex items-center justify-center mb-0">7
+          </div>
+        </div>
+        <!--Second column-->
+        <h5 class="mt-5">Reviews</h5>
+      </div>
 
-        <div class="flex items-center">
-        <div class="rounded-full mx-32 bg-green-400 h-24 w-24
-        flex items-center justify-center">
-        4
-        </div>
-        <h5>Report</h5>
-        </div>
-
-        <div class="flex items-center">
-        <div class="rounded-full mx-32 bg-green-400 h-24 w-24
-                flex items-center justify-center">
-            5
-        </div>
-        <h5>Reviews</h5>
-        </div>
     </div>
 
   </div>
-  <!-- <div class="items-center">
-    <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Time Tracker</h5>
-    <p class="font-normal text-gray-700 dark:text-gray-400">Bring your productivity a notch higher. Track time professionally.</p>
-    <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-    Register
-    </button>
-    <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-    Login
-    </button>
-
-  </div> -->
+  
 
 </body>
 </html>
