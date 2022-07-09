@@ -33,7 +33,8 @@
               "src/styles.css"
             ],
             "scripts": [ 
-              "src/assets/js/timer.js"
+              "src/assets/js/timer.js",
+              "/home/moringa/Desktop/Time-Tracker-Angular/src/assets/js/timer.js"
             ]
           },
           "configurations": {
