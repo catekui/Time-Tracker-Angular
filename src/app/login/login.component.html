@@ -1,18 +1,18 @@
 <div class="grid grid-cols-2"> 
 <!--First Column start-->
 
-<div class="max-w-2xl mx-auto mt-32">
+<div class="max-w-2xl mx-auto mt-32 h-fit">
 	<div
 		class="bg-white shadow-md border border-gray-200 rounded-lg max-w-sm p-4 sm:p-6 lg:p-8 dark:bg-gray-800 dark:border-gray-700">
-		<form class="space-y-6" action="#">
+		<form  [formGroup]="form" (submit)="submit()" class="space-y-6">
 			<h3 class="text-xl text-center font-medium text-cyan-900 dark:text-white">Login</h3>
 			<div>
 				<label for="email" class="text-sm font-medium text-cyan-900 block mb-2 dark:text-gray-300">Email</label>
-				<input type="email" name="email" id="email" class="bg-cyan-900 border border-gray-300 text-white sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500  dark:text-white" required="">
+				<input formControlName="email" type="email" name="email" id="email" class="bg-cyan-900 border border-gray-300 text-white sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500  dark:text-white" required="">
             </div>
 				<div>
 					<label for="password" class="text-sm font-medium text-cyan-900 block mb-2 dark:text-gray-300">Password</label>
-					<input type="password" name="password" id="password" class="bg-cyan-900 border border-gray-300 text-white sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" required="">
+					<input formControlName="password" type="password" name="password" id="password" class="bg-cyan-900 border border-gray-300 text-white sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" required="">
                 </div>
 					  
             <div class="flex items-center justify-center">
