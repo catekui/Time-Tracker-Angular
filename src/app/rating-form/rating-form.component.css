@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:300,400,600&subset=latin-ext');
+*{
+    background-color: #f9d1d1;
+    box-sizing: border-box;
+    border-radius: 3px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, .25);
+    font-family: 'Playfair Display', serif;
+    line-height: 1.5;
+}
+
+.ui-input {
+    position: relative;
+    padding: 0;
+    border: 0;
+  }
+
+  .ui-input input {
+    font-family: $base-font-family;
+    border: 0;
+    background: none;
+    padding: 16px 0 16px 0;
+    font-size: 24px;
+    outline: 0;
+    width: 100%;
+    tap-highlight-color: rgba(0,0,0,0);
+    touch-callout: none;
+  }
+  label{
+    font-family: $base-font-family;
+    border: 0;
+    background: none;
+    padding: 16px 0 16px 0;
+    font-size: 24px;
+    outline: 0;
+    width: 100%;
+    tap-highlight-color: rgba(0,0,0,0);
+    touch-callout: none;
+  }
+  
+  .btn {
+    border: 0;
+    background-color: #50617A;
+    padding: 18px 30px;
+    font-size: 14px;
+    line-height: 1.5;
+    text-transform: uppercase;
+    letter-spacing: .0875em;
+    font-weight: 500;
+    color: #ffffff;
+    font-family: $base-font-family;
+    border-radius: 100px;
+    outline: 0;
+    transition: background-color $time $bezier,
+                color $time $bezier;
+  }
+  
+  .btn:focus,.btn:active,
+  .btn:hover {
+    background-color: #6EB1FF;
+    color: white;
+  }
+  
+  .__first, .__second, .__third, .__fourth {
+    animation-name: fadeIn;
+    animation-duration: 180ms;
+    animation-fill-mode: both;
+    animation-iteration-count: 1;
+  }
+  
+  .__first { animation-delay: 0; }
+  .__second { animation-delay: 80ms; }
+  .__third { animation-delay: 180ms; }
+  .__fourth { animation-delay: 360ms; }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translate3d(0, -25%, 0);
+    }
+    to {
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+    }
+  }
+  .form-footer {
+    margin-top: 2em;
+  }
+  .container {
+    max-width: 320px;
+    margin: 0 auto;
+    padding: 20px 16px 40px 16px;
+    transform: translateZ(0);
+    text-align: center;
+  } 
+  .ui-input input + label {
+    position: relative;
+    display: block;
+    padding: 8px 0 8px 0;
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: .0875em;
+    font-weight: 500;
+    text-align: left;
+
+  }
+  h1 {
+    font-family: "Texta", $base-font-family;
+    font-weight: 700;
+    font-size:30px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    text-align: center;
+  }

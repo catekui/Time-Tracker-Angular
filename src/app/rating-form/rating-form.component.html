@@ -1,1 +1,36 @@
-<p>rating-form works!</p>
+<body>
+<div class="container">
+<h1>Rate Us</h1>
+<form [formGroup]="myForm" (ngSubmit)="onSubmit()">
+    <div class="form">
+      <label class="form-fieldset ui-input">
+        <span>Effiency:</span>
+        <input formControlName="efficiency" placeholder="Efficiency">
+      </label>
+    </div>
+    <div>
+      <label class="form-fieldset ui-input">
+        <span>Experience:</span>
+        <input formControlName="experience" placeholder="Experience">
+      </label>
+    </div>
+    <div>
+      <label class="form-fieldset ui-input">
+       <span>Productivity:</span> 
+        <input formControlName="productivity" placeholder="Productivity">
+      </label>
+    </div>
+    <div class="form-footer">
+    <button class="btn" type="submit"[disabled]="!myForm.valid" >{{title}}</button>
+    </div>
+  </form>
+</div>
+<script>
+    
+var $input = $('.form-fieldset > input');
+
+$input.blur(function (e) {
+  $(this).toggleClass('filled', !!$(this).val());
+});
+</script>
+</body>
