@@ -20,6 +20,7 @@ import { LandingpageComponent } from './landingpage/landingpage.component';
 import { ProjectComponent } from './project/project.component';
 import { TimerComponent } from './timer/timer.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { RatingFormComponent } from './rating-form/rating-form.component';
 
 @NgModule({
   declarations: [
@@ -38,6 +39,7 @@ import { NavbarComponent } from './navbar/navbar.component';
     ProjectComponent,
     TimerComponent,
     NavbarComponent,
+    RatingFormComponent,
 
   ],
   imports: [
