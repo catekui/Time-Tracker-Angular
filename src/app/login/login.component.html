@@ -1,42 +1,42 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
-<body>
-  <div class="container">
-    <div class="grid grid-cols-2">
-    <div class="row flex flex-col justify-center items-center m-auto mt-8">
-      <div class="col-md-6">
-        <div class="card">
-          <div class="text-center">
-            <h1>Login</h1>
-            <h6>Please fill in the details</h6>
-          </div>
-          <form class="mx-auto">
-            <form>
-              <div class="mb-3">
-                <label for="email" class="block text-sm font-medium text-black-700">Email address</label>
-                <input type="email" name="email"  id="email" autocomplete="email" required class="border border-gray-300 px-3 py-2 rounded-lg shadow-sm focus:outline-none focus:border-indigo-500 focus:ring focus:ring-indigo-50" >
-              </div>
-              <div class="mb-3">
-                <label for="password" class="block text-sm font-medium text-black-700">Password</label>
-                <input type="password" required class="border border-gray-300 px-3 py-2 rounded-lg shadow-sm focus:outline-none focus:border-indigo-500 focus:ring focus:ring-indigo-50" id="password">
-              </div>
-              <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-                Login
-              </button>
-            </form>
-          </form>
-        </div>
-      </div>
-    </div>
-  </div>
-  </div>
-  
-</body>
-</html>
+<div class="grid grid-cols-2"> 
+<!--First Column start-->
+
+<div class="max-w-2xl mx-auto mt-32 h-fit">
+	<div
+		class="bg-white shadow-md border border-gray-200 rounded-lg max-w-sm p-4 sm:p-6 lg:p-8 dark:bg-gray-800 dark:border-gray-700">
+		<form  [formGroup]="form" (submit)="submit()" class="space-y-6">
+			<h3 class="text-xl text-center font-medium text-cyan-900 dark:text-white">Login</h3>
+			<div>
+				<label for="email" class="text-sm font-medium text-cyan-900 block mb-2 dark:text-gray-300">Email</label>
+				<input formControlName="email" type="email" name="email" id="email" class="bg-cyan-900 border border-gray-300 text-white sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500  dark:text-white" required="">
+            </div>
+				<div>
+					<label for="password" class="text-sm font-medium text-cyan-900 block mb-2 dark:text-gray-300">Password</label>
+					<input formControlName="password" type="password" name="password" id="password" class="bg-cyan-900 border border-gray-300 text-white sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" required="">
+                </div>
+					  
+            <div class="flex items-center justify-center">
+              <div>
+						<button type="submit" class=" text-white bg-cyan-900  hover:bg-pink-300 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Login</button>
+            </div></div>
+
+            
+            
+						<div class="text-sm font-medium text-cyan-900 dark:text-gray-300">
+							Not registered? <a routerLink="/register" class="text-blue-700 hover:underline dark:text-blue-500">Create
+								account</a>
+						</div>
+		</form>
+	</div>
+</div>
+<!--First Column end-->
+
+
+<!--Second column start-->
+<div class="bg-cyan-900 p-12">
+<svg xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" viewBox="0 0 32 32"><circle cx="8" cy="8" r="7.5" fill="#092c38" id="id_133"></circle><path fill="#0a2f3d" d="M1.5,8A7.49442,7.49442,0,0,1,8.5.52521C8.334.51422,8.16882.5,8,.5a7.5,7.5,0,0,0,0,15c.16882,0,.334-.01422.5-.02521A7.49442,7.49442,0,0,1,1.5,8Z" id="id_134"></path><circle cx="8" cy="8" r="5.5" fill="#ffffff" id="id_135"></circle><path fill="#0c3442" d="M3.5,8a5.49864,5.49864,0,0,1,5-5.47479C8.33508,2.51031,8.16882,2.5,8,2.5a5.5,5.5,0,0,0,0,11c.16882,0,.33508-.01031.5-.02521A5.49868,5.49868,0,0,1,3.5,8Z" id="id_136"></path><path fill="#e08fca" d="M10.5 8.5H9a.5.5 0 0 1 0-1h1.5a.5.5 0 0 1 0 1zM7.874 7.51221a.49971.49971 0 0 1-.5-.5V4.87256a.5.5 0 1 1 1 0V7.01221A.49971.49971 0 0 1 7.874 7.51221z" id="id_137"></path><circle cx="8" cy="8" r="1" fill="#0a3140" transform="rotate(-37.84 8 8)" id="id_138"></circle><path fill="#eb87fa" d="M3.476,24.5h1a1,1,0,0,1,1,1v6a0,0,0,0,1,0,0h-3a0,0,0,0,1,0,0v-6A1,1,0,0,1,3.476,24.5Z" id="id_139"></path><path fill="#072733" d="M4.476,24.5h-1a1,1,0,0,0-1,1v6h1v-6A1,1,0,0,1,4.476,24.5Z" id="id_140"></path><path fill="#df80ed" d="M13.476,31.5h-3v-9a1,1,0,0,1,1-1h1a1,1,0,0,1,1,1Z" id="id_141"></path><path fill="#2b3845" d="M12.476,21.5h-1a1,1,0,0,0-1,1v9h1v-9A1,1,0,0,1,12.476,21.5Z" id="id_142"></path><path fill="#cb80d6" d="M19.476,17.5h1a1,1,0,0,1,1,1v13a0,0,0,0,1,0,0h-3a0,0,0,0,1,0,0v-13A1,1,0,0,1,19.476,17.5Z" id="id_143"></path><path fill="#1d354d" d="M20.476,17.5h-1a1,1,0,0,0-1,1v13h1v-13A1,1,0,0,1,20.476,17.5Z" id="id_144"></path><path fill="#ca7ed6" d="M27.476,10.5h1a1,1,0,0,1,1,1v20a0,0,0,0,1,0,0h-3a0,0,0,0,1,0,0v-20A1,1,0,0,1,27.476,10.5Z" id="id_145"></path><path fill="#1c344d" d="M28.476,10.5h-1a1,1,0,0,0-1,1v20h1v-20A1,1,0,0,1,28.476,10.5Z" id="id_146"></path><path fill="#e08fca" d="M2.47559,22a.49994.49994,0,0,1-.11084-.9873,40.44361,40.44361,0,0,0,15.80908-6.91113A38.9502,38.9502,0,0,0,29.0332,1.26758a.50015.50015,0,1,1,.88574.46484,39.96836,39.96836,0,0,1-11.14062,13.166A41.41209,41.41209,0,0,1,2.5874,21.9873.49109.49109,0,0,1,2.47559,22Z" id="id_147"></path><path fill="#e098cd" d="M30.5,5a.50039.50039,0,0,1-.47412-.34082l-.8623-2.56689L26.666,2.97168a.5.5,0,1,1-.332-.94336L29.31006.98047a.50061.50061,0,0,1,.64014.3125l1.02393,3.04785A.49978.49978,0,0,1,30.5,5Z" id="id_148"></path></svg>
+</div>
+<!--Second Column end-->
+
+</div>
 
