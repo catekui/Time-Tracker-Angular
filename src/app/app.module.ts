@@ -21,7 +21,13 @@ import { FormsModule } from '@angular/forms';
 import { ProjectComponent } from './project/project.component';
 import { TimerComponent } from './timer/timer.component';
 import { NavbarComponent } from './navbar/navbar.component';
+
+import { PanelComponent } from './components/panel/panel.component';
+import { ProjectListComponent } from './components/project-list/project-list.component';
+import { ProjectSummaryComponent } from './components/project-summary/project-summary.component';
+
 import { RatingFormComponent } from './rating-form/rating-form.component';
+
 
 @NgModule({
   declarations: [
@@ -43,7 +49,13 @@ import { RatingFormComponent } from './rating-form/rating-form.component';
     ProjectComponent,
     TimerComponent,
     NavbarComponent,
+
+    PanelComponent,
+    ProjectListComponent,
+    ProjectSummaryComponent,
+
     RatingFormComponent,
+
 
   ],
   imports: [
@@ -54,8 +66,6 @@ import { RatingFormComponent } from './rating-form/rating-form.component';
     ReactiveFormsModule,
     HttpClientModule
   ],
-
-
 
   providers: [],
   bootstrap: [AppComponent]
