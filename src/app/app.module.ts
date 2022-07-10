@@ -4,6 +4,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
 
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ReviewsComponent } from './components/reviews/reviews.component';
@@ -22,9 +23,13 @@ import {HttpClientModule} from '@angular/common/http'
 import { ProjectComponent } from './project/project.component';
 import { TimerComponent } from './timer/timer.component';
 import { NavbarComponent } from './navbar/navbar.component';
+
 import { PanelComponent } from './components/panel/panel.component';
 import { ProjectListComponent } from './components/project-list/project-list.component';
 import { ProjectSummaryComponent } from './components/project-summary/project-summary.component';
+
+import { RatingFormComponent } from './rating-form/rating-form.component';
+
 
 @NgModule({
   declarations: [
@@ -46,9 +51,13 @@ import { ProjectSummaryComponent } from './components/project-summary/project-su
     ProjectComponent,
     TimerComponent,
     NavbarComponent,
+
     PanelComponent,
     ProjectListComponent,
     ProjectSummaryComponent,
+
+    RatingFormComponent,
+
 
   ],
   imports: [

@@ -5,6 +5,7 @@ import { ReviewsComponent } from './components/reviews/reviews.component';
 import { LandingpageComponent } from './landingpage/landingpage.component';
 import { LoginComponent } from './login/login.component';
 import { ProjectComponent } from './project/project.component';
+import { RatingFormComponent } from './rating-form/rating-form.component';
 import { RegisterComponent } from './register/register.component';
 
 const routes: Routes = [
@@ -15,6 +16,7 @@ const routes: Routes = [
   {path:'project', component:ProjectComponent},
   {path:'reviews', component:ReviewsComponent},
   {path:'projectform', component:ProjectFormComponent},
+  {path:'ratingform', component:RatingFormComponent},
 ];
 
 @NgModule({
