@@ -27,7 +27,10 @@
             "tsConfig": "tsconfig.app.json",
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              "src/assets/bell.mp3",
+              "src/assets/click.mp3",
+              "/home/moringa/Desktop/Time-Tracker-Angular/src/assets/click.mp3"
             ],
             "styles": [
               "src/styles.css"
