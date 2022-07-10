@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
-import { error } from 'console';
 import { RatingFormService } from 'src/app/services/rating-form.service';
 
 @Component({
@@ -37,14 +36,16 @@ export class RatingFormComponent implements OnInit {
         experience: this.reviews.experience,
         productivity: this.reviews.productivity,
       };
-      this.ratingFormService.create(data).subscribe(
-      response=> {
-        console.log(response);
-        this.submitted= true;
-      },
-      error=> console.log(error),
-      )
-    }
+      this.ratingFormService.create(data)
+      .subscribe(
+        response => {
+          console.log(response);
+          this.submitted = true;
+        },
+        error => {
+          console.log(error);
+        });
+  }
 
     newReview(){
       this.submitted=false;
@@ -52,7 +53,7 @@ export class RatingFormComponent implements OnInit {
         efficiency: '',
         experience: '',
         productivity: '',
-      }
+      };
     }
     
 
@@ -62,3 +63,4 @@ export class RatingFormComponent implements OnInit {
  
 }
 }
+
