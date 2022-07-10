@@ -15,6 +15,9 @@ import { ProjComponent } from './components/proj/proj.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { LandingpageComponent } from './landingpage/landingpage.component';
+import { NavComponent } from './nav/nav.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import {HttpClientModule} from '@angular/common/http'
 
 import { ProjectComponent } from './project/project.component';
 import { TimerComponent } from './timer/timer.component';
@@ -37,6 +40,9 @@ import { ProjectSummaryComponent } from './components/project-summary/project-su
     LoginComponent,
     RegisterComponent,
     LandingpageComponent,
+
+    NavComponent
+
     ProjectComponent,
     TimerComponent,
     NavbarComponent,
@@ -48,6 +54,12 @@ import { ProjectSummaryComponent } from './components/project-summary/project-su
   imports: [
     BrowserModule,
     AppRoutingModule,
+
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule
+  ],
+
     ReactiveFormsModule,
     HttpClientModule,
 
@@ -56,6 +68,7 @@ import { ProjectSummaryComponent } from './components/project-summary/project-su
     BrowserModule,
     AppRoutingModule
   ], 
+
   providers: [],
   bootstrap: [AppComponent]
 })
