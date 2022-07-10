@@ -1,4 +1,4 @@
-input{
+input,select{
     background-color: #263F56;
     border-radius: 6px;
     width: 100%;
@@ -9,7 +9,8 @@ input{
 h3{
     text-align: center;
 }
-form-buttons{
+.form-buttons{
     padding: 6px;
-    background: linear-gradient(to left, #FFAFCC, #ffff);
+    background-image: linear-gradient(to left, rgba(255, 146, 202, 0.75) 0%, rgba(145, 149, 251, 0.86) 80%);
+    
 }
