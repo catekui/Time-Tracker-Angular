@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { RatingFormService } from 'src/app/services/rating-form.service';
+import { HttpClient } from '@angular/common/http';
+import { Router } from '@angular/router';
+import { Reviews } from '../models/reviews';
 
 @Component({
   selector: 'app-rating-form',
@@ -8,14 +11,7 @@ import { RatingFormService } from 'src/app/services/rating-form.service';
   styleUrls: ['./rating-form.component.css']
 })
 export class RatingFormComponent implements OnInit {
-  reviews = {
-    efficiency:'',
-    experience:'',
-    productivity:'',
-  
-  };
-  submitted = false;
-
+ 
   myForm = new FormGroup({
     efficiency: new FormControl(''),
     experience: new FormControl(''),
@@ -26,39 +22,31 @@ export class RatingFormComponent implements OnInit {
   clearInput(){
     this.myForm.reset()
    }
-    constructor(private ratingFormService: RatingFormService) {
+    constructor(private http: HttpClient, private router: Router, private ratingFormService: RatingFormService) {
     }
   
     ngOnInit(): void {}
-    saveReview(){
-      const data = {
-        efficiency: this.reviews.efficiency,
-        experience: this.reviews.experience,
-        productivity: this.reviews.productivity,
-      };
-      this.ratingFormService.create(data)
-      .subscribe(
-        response => {
-          console.log(response);
-          this.submitted = true;
-        },
-        error => {
-          console.log(error);
-        });
-  }
 
-    newReview(){
-      this.submitted=false;
-      this.reviews= {
-        efficiency: '',
-        experience: '',
-        productivity: '',
-      };
-    }
+    newReview = new Reviews("",0,0,0)
+ 
+     
     
 
     onSubmit = () => {
-      console.log(this.myForm.value.activity)
+      //console.log(this.myForm.value.activity)
+      this.newReview.efficiency = this.myForm.value.efficiency;
+      this.newReview.experience = this.myForm.value.experience;
+      this.newReview.productivity = this.myForm.value.productivity;
+
+      this.newReview.user = 1;
+      this.ratingFormService.addReview(this.newReview.user,this.newReview.efficiency, this.newReview.experience,this.newReview.productivity).subscribe(
+        newReview => {
+         
+          newReview = newReview
+          console.log(newReview)
+        }
+      )
+    
       this.myForm.reset()
  
 }
