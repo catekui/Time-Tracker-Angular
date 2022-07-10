@@ -1,0 +1,59 @@
+
+  <div *ngIf="show" id="id01" class="w3-modal">
+    <div class="w3-modal-content">
+      <div class="w3-container">
+        <span (click)="displayForm()"
+        class="w3-button w3-display-topright">&times;</span>
+        <!-- <span onclick="document.getElementById('id01').style.display='none'"
+        class="w3-button w3-display-topright">&times;</span> -->
+        <app-project-form [title]="formTitle" [title]="formTitle"></app-project-form>
+      </div>
+    </div>
+  </div>
+
+  <div *ngIf="show2" id="id02" class="w3-modal">
+    <div class="w3-modal-content">
+      <div class="w3-container">
+        <span (click)="displayForm2()"
+        class="w3-button w3-display-topright">&times;</span>
+        <!-- <span onclick="document.getElementById('id01').style.display='none'"
+        class="w3-button w3-display-topright">&times;</span> -->
+        <app-project-summary></app-project-summary>
+      </div>
+    </div>
+  </div>
+
+
+
+
+<table class="table-auto">
+    <thead>
+      <tr>
+        <th>I</th>
+        <th>Project</th>
+        <th>Working Interval</th>
+        <th>Start</th>
+        <th>Edit</th>
+        <th>Delete</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let project of projects; let i = index">
+        <td>{{i+1}}</td>
+        <td (click)="displayForm2()">{{project.description}}</td>
+        <td>{{project.time_interval}} minutes</td>
+        <td><i class="fas fa-play"></i></td>
+        <td (click)="editProject(project.id)"><i class="fas fa-edit"></i></td>
+        <td (toDelete)='deleteProjectNow(project.id)' (click)="deleteProject(project.id)"><i class="fa-solid fa-circle"></i></td>
+      </tr>
+    </tbody>
+  </table>
+  ​
+
+
+
+
+
+
+
+  

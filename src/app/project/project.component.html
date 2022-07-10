@@ -10,22 +10,28 @@
                 </ul>
                 <span class="navbar-text">
                     <i class="fas fa-bell"></i>
-                    <button onclick="document.getElementById('id01').style.display='block'"
+                    <button (click)="displayForm()"
                     class="w3-button btn addproject" >Add Project</button>
+                    <!-- <button onclick="document.getElementById('id01').style.display='block'"
+                    class="w3-button btn addproject" >Add Project</button> -->
                 </span>
             </div>
         </div>
-    </nav>
-    <div id="id01" class="w3-modal">
+    </nav> 
+   
+    <div *ngIf="show" id="id01" class="w3-modal">
         <div class="w3-modal-content">
           <div class="w3-container">
-            <span onclick="document.getElementById('id01').style.display='none'"
+            <span (click)="displayForm()"
             class="w3-button w3-display-topright">&times;</span>
-            <app-project-form></app-project-form>
+            <!-- <span onclick="document.getElementById('id01').style.display='none'"
+            class="w3-button w3-display-topright">&times;</span> -->
+            <app-project-form [title]="formTitle"></app-project-form>
           </div>
         </div>
       </div>
-         
+
+      
       
       
       
@@ -35,7 +41,10 @@
     <app-timer></app-timer>
     <app-navbar></app-navbar>
 </div>
+
+<app-project-list></app-project-list>
         
     
     
+
 

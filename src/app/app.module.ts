@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { ReactiveFormsModule } from '@angular/forms';
-
+import { HttpClientModule } from '@angular/common/http';
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -19,6 +19,9 @@ import { LandingpageComponent } from './landingpage/landingpage.component';
 import { ProjectComponent } from './project/project.component';
 import { TimerComponent } from './timer/timer.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { PanelComponent } from './components/panel/panel.component';
+import { ProjectListComponent } from './components/project-list/project-list.component';
+import { ProjectSummaryComponent } from './components/project-summary/project-summary.component';
 
 @NgModule({
   declarations: [
@@ -37,12 +40,16 @@ import { NavbarComponent } from './navbar/navbar.component';
     ProjectComponent,
     TimerComponent,
     NavbarComponent,
+    PanelComponent,
+    ProjectListComponent,
+    ProjectSummaryComponent,
 
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
+    HttpClientModule,
 
    
  
