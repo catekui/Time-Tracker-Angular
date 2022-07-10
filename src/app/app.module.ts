@@ -16,6 +16,9 @@ import { ProjComponent } from './components/proj/proj.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { LandingpageComponent } from './landingpage/landingpage.component';
+import { NavComponent } from './nav/nav.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import {HttpClientModule} from '@angular/common/http'
 
 import { ProjectComponent } from './project/project.component';
 import { TimerComponent } from './timer/timer.component';
@@ -36,6 +39,9 @@ import { RatingFormComponent } from './rating-form/rating-form.component';
     LoginComponent,
     RegisterComponent,
     LandingpageComponent,
+
+    NavComponent
+
     ProjectComponent,
     TimerComponent,
     NavbarComponent,
@@ -45,6 +51,12 @@ import { RatingFormComponent } from './rating-form/rating-form.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
+
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule
+  ],
+
     ReactiveFormsModule,
     HttpClientModule,
    
@@ -52,6 +64,7 @@ import { RatingFormComponent } from './rating-form/rating-form.component';
     BrowserModule,
     AppRoutingModule
   ], 
+
   providers: [],
   bootstrap: [AppComponent]
 })
