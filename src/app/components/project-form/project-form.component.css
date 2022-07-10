@@ -1,0 +1,15 @@
+input{
+    background-color: #263F56;
+    border-radius: 6px;
+    width: 100%;
+    margin: 10px;
+    color: #ffffff;
+    font-size: 24px;
+}
+h3{
+    text-align: center;
+}
+form-buttons{
+    padding: 6px;
+    background: linear-gradient(to left, #FFAFCC, #ffff);
+}

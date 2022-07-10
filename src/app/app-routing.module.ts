@@ -1,7 +1,10 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { ProjectFormComponent } from './components/project-form/project-form.component';
+import { ReviewsComponent } from './components/reviews/reviews.component';
 import { LandingpageComponent } from './landingpage/landingpage.component';
 import { LoginComponent } from './login/login.component';
+import { ProjectComponent } from './project/project.component';
 import { RegisterComponent } from './register/register.component';
 
 const routes: Routes = [
@@ -9,6 +12,9 @@ const routes: Routes = [
   {path:'login', component: LoginComponent},
   {path:'register', component: RegisterComponent},
   {path:'landingpage', component:LandingpageComponent},
+  {path:'project', component:ProjectComponent},
+  {path:'reviews', component:ReviewsComponent},
+  {path:'projectform', component:ProjectFormComponent},
 ];
 
 @NgModule({

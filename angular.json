@@ -1,5 +1,8 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "cli": {
+    "analytics": false
+  },
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
@@ -24,18 +27,24 @@
             "tsConfig": "tsconfig.app.json",
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              "src/assets/bell.mp3",
+              "src/assets/click.mp3",
+              "/home/moringa/Desktop/Time-Tracker-Angular/src/assets/click.mp3"
             ],
             "styles": [
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [ 
+              "src/assets/js/timer.js",
+              "/home/moringa/Desktop/Time-Tracker-Angular/src/assets/js/timer.js"
+            ]
           },
           "configurations": {
             "production": {
               "budgets": [
                 {
-                  "type": "initial",
+                  "type": "initial", 
                   "maximumWarning": "500kb",
                   "maximumError": "1mb"
                 },
@@ -96,11 +105,13 @@
             "styles": [
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [
+            ]
           }
         }
       }
     }
   },
   "defaultProject": "timetracker"
+  
 }

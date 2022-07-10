@@ -1,0 +1,41 @@
+
+    <nav class="navbar navbar-expand-lg bg-light">
+        <div class="container-fluid">
+            
+            <div class="collapse navbar-collapse" id="navbarText">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#"></a>
+                    </li>
+                </ul>
+                <span class="navbar-text">
+                    <i class="fas fa-bell"></i>
+                    <button onclick="document.getElementById('id01').style.display='block'"
+                    class="w3-button btn addproject" >Add Project</button>
+                </span>
+            </div>
+        </div>
+    </nav>
+    <div id="id01" class="w3-modal">
+        <div class="w3-modal-content">
+          <div class="w3-container">
+            <span onclick="document.getElementById('id01').style.display='none'"
+            class="w3-button w3-display-topright">&times;</span>
+            <app-project-form></app-project-form>
+          </div>
+        </div>
+      </div>
+         
+      
+      
+      
+      
+    
+<div class="col-10 pt-4" style="text-align: justify;">
+    <app-timer></app-timer>
+    <app-navbar></app-navbar>
+</div>
+        
+    
+    
+
