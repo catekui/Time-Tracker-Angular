@@ -30,14 +30,14 @@
               "src/assets",
               "src/assets/bell.mp3",
               "src/assets/click.mp3",
-              "/home/moringa/Desktop/Time-Tracker-Angular/src/assets/click.mp3"
+              "/home/moringa/Documents/core/FinProject/Time-Tracker-Angular/src/assets/click.mp3"
             ],
             "styles": [
               "src/styles.css"
             ],
             "scripts": [ 
               "src/assets/js/timer.js",
-              "/home/moringa/Desktop/Time-Tracker-Angular/src/assets/js/timer.js"
+              "/home/moringa/Documents/core/FinProject/Time-Tracker-Angular/src/assets/js/timer.js"
             ]
           },
           "configurations": {

@@ -1,31 +1,37 @@
-<div class="container-fluid h-100">
-    <div class="row h-100">
-        <div class="col-2">
-            <ul class="nav-list sidebar">
+<div class="container-fluid">
+    <div class="row">
+        <div class="col">
+            <ul class="nav-list sidebar static d-flex flex-column">
+               <div class="top">
                 <li>
-                    <a routerLink="/project">
-                        <i class="fas fa-list"></i>
+                    <a routerLink="/project" class="d-flex flex-row justify-content-center align-items-center px-3 mx-4">
+                        <i class="fas fa-list icons"></i>
                         <span class="links_name">Projects</span>
                     </a>
                 </li>
                 <li>
-                    <a href="">
-                        <i class="fas fa-chart-line"></i>
+                    <a href="" class="d-flex flex-row justify-content-center align-items-center px-3 mx-4 report">
+                        <i class="fas fa-chart-line icons"></i>
                         <span class="links_name">Report</span>
                     </a>
                 </li>
                 <li>
-                    <a routerLink="/reviews">
-                        <i class="fas fa-star"></i>
+                    <a routerLink="/reviews" class="d-flex flex-row justify-content-center align-items-center px-3 mx-4">
+                        <i class="fas fa-star icons"></i>
                         <span class="links_name">Reviews</span>
                     </a>
                 </li>
-                <li>
-                    <a routerLink="/landingpage" >
-                        <i class="fas fa-sign-out-alt"></i>
-                        <span class="links_name" id="log_out">Logout</span>
-                    </a>
-                </li>
+               </div>
+                <div class="bottom">
+                    <li>
+                        <a routerLink="/landingpage" class="d-flex flex-row justify-content-center align-items-center px-3 mx-4" >
+                            <i class="fas fa-sign-out-alt icons"></i>
+                            <span class="links_name" id="log_out">Logout</span>
+                        </a>
+                    </li>
+                </div>
             </ul>
         </div>
+    </div>
+</div>
 

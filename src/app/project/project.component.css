@@ -34,12 +34,33 @@
 } 
 
 /* navbar inline */
-.addproject{
-    background-color: #FFAFCC;
-    margin-left: 20px;
+.addproject, .addproject:hover{
+    background: linear-gradient(101.68deg, #FFAFCC -70%, #A2D2FF 131.87%);
+    color: #fff;
+    font-weight: 700;
 }
-
 
 #id01{
 display: block;
+}
+
+#content{
+    background-color: #BDE0FE;
+    border-radius: 3em 0 0 3em;
+}
+
+ nav{
+    width: 80%;
+    background-color: rgba(0, 0, 0, 0);
+ }
+
+ .flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }
+
+.list{
+    width: 100%;
+    margin: 0 !important;
 }
