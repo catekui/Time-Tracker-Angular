@@ -29,8 +29,9 @@
               "src/favicon.ico",
               "src/assets",
               "src/assets/bell.mp3",
+
               "src/assets/click.mp3"
-            
+          
             ],
             "styles": [
               "src/styles.css"
@@ -38,6 +39,7 @@
             "scripts": [ 
               "src/assets/js/timer.js"
               
+
             ]
           },
           "configurations": {
