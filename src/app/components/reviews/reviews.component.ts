@@ -7,6 +7,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ReviewsComponent implements OnInit {
 
+  show = false;
+  show2 = false;
+  formTitle = "Add Project";
+
+  displayForm(){
+    this.show = !this.show;
+    console.log(this.show);
+  }
+  displayForm2(){
+    this.show2 = !this.show2;
+  }
+
   constructor(){ }
 
   ngOnInit(): void {

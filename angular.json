@@ -33,6 +33,7 @@
               "/home/moringa/Documents/core/FinProject/Time-Tracker-Angular/src/assets/click.mp3"
             ],
             "styles": [
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.css"
             ],
             "scripts": [ 
