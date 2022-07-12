@@ -29,6 +29,8 @@ import { ProjectSummaryComponent } from './components/project-summary/project-su
 import { RatingFormComponent } from './rating-form/rating-form.component';
 import { ActivityComponent } from './components/activity/activity.component';
 import { ActivityFormComponent } from './activity-form/activity-form.component';
+import { ActivityListComponent } from './activity-list/activity-list.component';
+import { ActivitySummaryComponent } from './activity-summary/activity-summary.component';
 
 
 @NgModule({
@@ -59,6 +61,8 @@ import { ActivityFormComponent } from './activity-form/activity-form.component';
     RatingFormComponent,
      ActivityComponent,
      ActivityFormComponent,
+     ActivityListComponent,
+     ActivitySummaryComponent,
 
 
   ],

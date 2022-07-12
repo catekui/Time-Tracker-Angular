@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient} from '@angular/common/http';
 
+
 @Injectable({
   providedIn: 'root'
 })
@@ -17,5 +18,20 @@ export class ActivityService {
       date: date,
     }
       )
+  }
+  getUserActivity(userId:number) {
+    console.log("activity service UserId: " + userId)
+    return this.http.get(this.base_url + "/api/activity-list" + userId)
+  }
+  editActivity(activityId:number, activity:string) {
+    return this.http.post(this.base_url + "/api/activity-update/"+ {activityId}, 
+    {
+     name: activity
+    }
+    )
+  }
+  deleteActivity(activityId:number) {
+    console.log( "activity service UserId"+ activityId)
+    return this.http.delete(this.base_url+"/api/activity-delete" + activityId)
   }
 }

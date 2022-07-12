@@ -1,0 +1,46 @@
+<div *ngIf="show" id="id01" class="w3-modal">
+    <div class="w3-modal-content">
+      <div class="w3-container">
+        <span (click)="displayForm()"
+        class="w3-button w3-display-topright">&times;</span>
+        <!-- <span onclick="document.getElementById('id01').style.display='none'"
+        class="w3-button w3-display-topright">&times;</span> -->
+        <app-activity-form [title]="formHeading" [title]="formHeading"></app-activity-form>
+      </div>
+    </div>
+  </div>
+
+  <div *ngIf="show2" id="id02" class="w3-modal">
+    <div class="w3-modal-content">
+      <div class="w3-container">
+        <span (click)="displayForm2()"
+        class="w3-button w3-display-topright">&times;</span>
+        <!-- <span onclick="document.getElementById('id01').style.display='none'"
+        class="w3-button w3-display-topright">&times;</span> -->
+        <app-activity-summary></app-activity-summary>
+      </div>
+    </div>
+  </div>
+
+
+
+
+<table class="table-auto">
+    <thead>
+      <tr>
+        <th>I</th>
+        <th>Activity</th>
+        <th>Edit</th>
+        <th>Delete</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let activity of activities; let i = index">
+        <td>{{i+1}}</td>
+        <td (click)="displayForm2()">{{activity.activity}}</td>
+        <td (click)="editActivity(activity.id)"><i class="fas fa-edit"></i></td>
+        <td (toDelete)='deleteActivityNow(activity.id)' (click)="deleteActivity(activity.id)"><i class="fa-solid fa-circle"></i></td>
+      </tr>
+    </tbody>
+  </table>
+  ​
