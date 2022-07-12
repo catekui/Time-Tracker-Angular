@@ -13,7 +13,6 @@ import { Router } from '@angular/router';
 export class ActivityFormComponent implements OnInit {
   activity_form = new FormGroup({
     activity: new FormControl(''),
-    date:new FormControl(''),
   
    })
    title = 'Add Activity'
@@ -25,7 +24,7 @@ export class ActivityFormComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  newActivity = new Activity("","", new Date())
+  newActivity = new Activity("","", Date())
 
   onSubmit = () => {
     this.newActivity.name = this.activity_form.value.activity;

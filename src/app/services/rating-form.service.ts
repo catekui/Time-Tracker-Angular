@@ -14,7 +14,7 @@ export class RatingFormService {
  
   addReview(user: any, efficiency: number, experience:number, productivity:number){
     console.log(user)
-    return this.http.post(this.base_url+"api/add-review", {
+    return this.http.post(this.base_url+"/api/add-review", {
       user:user,
       efficiency:efficiency,
       experience:experience,

@@ -9,9 +9,9 @@ export class ActivityService {
   
 
   constructor(private http: HttpClient) { }
-  addActivity(user:any, activity:string, date:number) {
+  addActivity(user:any, activity:string, date:any) {
     console.log(user)
-    return this.http.post(this.base_url + "api/activity-create", {
+    return this.http.post(this.base_url + "/api/activity-create", {
       user: user,
       name: activity,
       date: date,
