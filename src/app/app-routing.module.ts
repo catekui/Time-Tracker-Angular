@@ -7,6 +7,7 @@ import { LoginComponent } from './login/login.component';
 import { ProjectComponent } from './project/project.component';
 import { RatingFormComponent } from './rating-form/rating-form.component';
 import { RegisterComponent } from './register/register.component';
+import { BarchartComponent } from './components/barchart/barchart.component';
 
 const routes: Routes = [
   {path: '', redirectTo:'landingpage', pathMatch:'full'},
@@ -17,6 +18,7 @@ const routes: Routes = [
   {path:'reviews', component:ReviewsComponent},
   {path:'projectform', component:ProjectFormComponent},
   {path:'ratingform', component:RatingFormComponent},
+  {path:'dashboard', component:BarchartComponent},
 ];
 
 @NgModule({
