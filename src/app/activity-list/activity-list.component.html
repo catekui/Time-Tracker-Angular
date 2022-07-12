@@ -37,7 +37,7 @@
     <tbody>
       <tr *ngFor="let activity of activities; let i = index">
         <td>{{i+1}}</td>
-        <td (click)="displayForm2()">{{activity.activity}}</td>
+        <td (click)="displayForm2()">{{activity.name}}</td>
         <td (click)="editActivity(activity.id)"><i class="fas fa-edit"></i></td>
         <td (toDelete)='deleteActivityNow(activity.id)' (click)="deleteActivity(activity.id)"><i class="fa-solid fa-circle"></i></td>
       </tr>

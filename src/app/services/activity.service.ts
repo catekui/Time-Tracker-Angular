@@ -21,7 +21,7 @@ export class ActivityService {
   }
   getUserActivity(userId:number) {
     console.log("activity service UserId: " + userId)
-    return this.http.get(this.base_url + "/api/activity-list" + userId)
+    return this.http.get(this.base_url + "/api/activity-list/" + userId)
   }
   editActivity(activityId:number, activity:string) {
     return this.http.post(this.base_url + "/api/activity-update/"+ {activityId}, 
@@ -32,6 +32,6 @@ export class ActivityService {
   }
   deleteActivity(activityId:number) {
     console.log( "activity service UserId"+ activityId)
-    return this.http.delete(this.base_url+"/api/activity-delete" + activityId)
+    return this.http.delete(this.base_url+"/api/activity-delete/" + activityId)
   }
 }
