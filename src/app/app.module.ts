@@ -61,7 +61,6 @@ import { RatingFormComponent } from './rating-form/rating-form.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule
