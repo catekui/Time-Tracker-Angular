@@ -10,6 +10,10 @@ export class ReviewsComponent implements OnInit {
   show = false;
   show2 = false;
   formTitle = "Add Project";
+  totalUsers: number = 1028;
+  efficiency: number = 89;
+  experience: number = 93;
+  productivity: number = 86;
 
   displayForm(){
     this.show = !this.show;

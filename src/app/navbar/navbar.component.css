@@ -1,13 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
 .top{
     margin-bottom: 30vh;
     padding-top: 5rem;
     margin-left: calc(-5.5rem);
+    font-family: 'PT Sans', sans-serif !important;
 }
 
 .bottom{
-    margin-top: 26.05vh;
+    margin-top: 12.05vh;
     padding-bottom: 2rem;
     margin-left: calc(-5.5rem);
+    font-family: 'PT Sans', sans-serif !important;
 }
 
 .icons{
@@ -17,15 +21,30 @@
 
 li a{
     padding: 1vh 0;
+    color: #263F56;
+}
+
+li a i:hover, li a i:active{
+    font-size: 1.3rem !important;
+}
+
+li a span:hover, li a span:active, li a span:focus{
+    font-size: 1.3rem !important;
 }
 
 li a span{
     margin-top: 0.5rem;
     font-size: 1.15rem;
     font-weight: 700;
+    text-align: left !important;
 }
 
 li a i{
     font-size: 1.15rem;
     font-weight: 700;
+    margin-top: calc(1vh);
+}
+
+.report{
+    margin-left: calc(2.8vw) !important;
 }
