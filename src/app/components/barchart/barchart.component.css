@@ -53,7 +53,7 @@ display: block;
 }
 
 #content{
-    background-color: #E3F0FB;
+    background: rgba(189, 224, 254, 0.5);
     border-radius: 3em 0 0 3em;
 }
 
