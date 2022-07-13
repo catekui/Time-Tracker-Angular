@@ -1,9 +1,9 @@
 
 export class Project{
 
-    date_ = new Date();
 
-  
+ id! :number;
+ 
     
 
 

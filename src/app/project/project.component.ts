@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { Project } from '../models/project';
 
 @Component({
   selector: 'app-project',
@@ -10,6 +11,9 @@ export class ProjectComponent implements OnInit {
   show2 = false;
   formTitle = "Add Project";
   timer: number = 0;
+  @Input () lastProject = new Project("","",0,0,"",new Date());
+  
+  
 
 
 
@@ -30,6 +34,11 @@ export class ProjectComponent implements OnInit {
   }
   childStartTimer(minutes:string){
     this.timer =  parseInt(minutes)
+
+  }
+  getLastProject(project:Project){
+    this.lastProject = project
+    console.log("last project: " + project)
 
   }
 

@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
-import { min } from 'rxjs';
+import { Component, OnInit, Output, EventEmitter,Input } from '@angular/core';
+import { Project } from 'src/app/models/project';
 import { ProjectService } from 'src/app/service/project.service';
 
 @Component({
@@ -12,7 +12,7 @@ export class ProjectListComponent implements OnInit {
   formTitle = "Edit Project Details";
   projects: any;
   projId! :number;
-
+  
   // minutesCount$: number = 5;
   // myInterval: any = null;
   // secondsCount$!:number;
@@ -20,14 +20,14 @@ export class ProjectListComponent implements OnInit {
   
   constructor(private http: HttpClient, private projectservice: ProjectService) { }
   @Output() startTimer = new EventEmitter;
-
-
+  @Input() lastProject!:Project;
+  @Input() showRow = false
   ngOnInit(): void {
     this.getProjects();
     
   }
    
-  startCountdown(id:number, minutes:string){
+  startCountdown(id:number, minutes:number){
     this.startTimer.emit(minutes)
   
   }
@@ -36,10 +36,14 @@ export class ProjectListComponent implements OnInit {
 
     // Edit this to capture the id of the currentlty logged user not a number 1
     getProjects = ()=> {
-    
-      this.projectservice.getUserProjects(1).subscribe(
+      this.projectservice.getProjects().subscribe(
          (data) => {
+          console.log(data)
           this.projects = data;
+
+
+
+
       
         },
       
@@ -50,11 +54,14 @@ export class ProjectListComponent implements OnInit {
 
       deleteProject(anId:number){
         let conf =  confirm("Do You want to delete this project?");
-        console.log(conf);
+        // console.log(conf);
         if (conf){
           this.projectservice.deleteProject(anId).subscribe(
             (data) => {
              this.projects = data;
+             
+             
+             console.log(data);
            },
           )};
 
