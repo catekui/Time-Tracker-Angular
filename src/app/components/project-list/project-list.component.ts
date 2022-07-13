@@ -12,14 +12,38 @@ export class ProjectListComponent implements OnInit {
   formTitle = "Edit Project Details";
   projects: any;
   projId! :number;
+  activeProject: number = -1;
+
 
   // minutesCount$: number = 5;
   // myInterval: any = null;
   // secondsCount$!:number;
   
+
+
+
   
   constructor(private http: HttpClient, private projectservice: ProjectService) { }
+
   @Output() startTimer = new EventEmitter;
+
+
+  checkIndex(id:number){
+    if (this.activeProject == id){
+      return "activeproject"
+    } 
+    return ""
+  }
+
+
+
+  changeButton(id:number){
+    if (this.activeProject == id){
+      return true
+    }
+    return false
+
+  }
 
 
   ngOnInit(): void {
@@ -27,9 +51,10 @@ export class ProjectListComponent implements OnInit {
     
   }
    
-  startCountdown(id:number, minutes:string){
-    this.startTimer.emit(minutes)
-  
+  startCountdown(id:number, minutes:string, break_interval:number, description:string){
+    this.activeProject = id;
+    this.startTimer.emit([minutes, break_interval, id, description])
+    
   }
   
 
@@ -40,10 +65,8 @@ export class ProjectListComponent implements OnInit {
       this.projectservice.getUserProjects(1).subscribe(
          (data) => {
           this.projects = data;
-      
+          console.log(data)
         },
-      
-      
       )};
 
 

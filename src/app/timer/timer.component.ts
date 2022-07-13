@@ -10,6 +10,10 @@ import { Component, OnInit, Input } from '@angular/core';
 export class TimerComponent implements OnInit {
 
 @Input() InputtedTime: number = 0;
+@Input() description: string = ''
+
+timerButton: boolean = false;
+
 
   constructor() { }
 
@@ -19,10 +23,9 @@ export class TimerComponent implements OnInit {
   myInterval:any = null;
   paused: boolean = true;
 
-  startTimer(){
-    if (this.InputtedTime > 0){
-      this.paused
-    }
-  }
-
  }
+
+ 
+
+
+

@@ -60,7 +60,7 @@
             </div>
 
             <div class="timerdiv flex">
-                <app-timer [InputtedTime]="timer"></app-timer>
+                <app-timer [InputtedTime]="timer" [description]="description"></app-timer>
             </div>
             <div *ngIf="show" id="id01" class="w3-modal">
                 <div class="w3-modal-content">
@@ -78,23 +78,8 @@
             </div>
         </div>
     </div>
-    <!-- modal -->
-    <div class="container">
-        <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Activity</button>
-
-        <!-- Modal -->
-        <div class="modal fade" id="myModal" role="dialog">
-            <div class="modal-dialog">
-
-                <!-- Modal content-->
-                <div class="modal-content">
-                    <div class="modal-body">
-                        <h3>Its time to take a break</h3>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+   
 
 
 </div>
+ 
