@@ -1,0 +1,53 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-2" style="background-color: #ffffff; min-height: 100vh;">
+            <app-navbar></app-navbar>
+        </div>
+        <div class="col-md-10" id="content">
+            <div id="nav" class="d-flex justify-content-center ">
+                <nav class="navbar navbar-expand-lg bg-transparent">
+                    <div class="container-fluid">
+                        
+                        <div class="collapse navbar-collapse" id="navbarText">
+                            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                                <li class="nav-item">
+                                    <a class="nav-link active" aria-current="page" href="#"></a>
+                                </li>
+                            </ul>
+                            <span class="navbar-text">
+                                <button (click)="displayForm()"
+                                class="w3-button btn addproject" >Add Activity</button>
+                                <!-- <button onclick="document.getElementById('id01').style.display='block'"
+                                class="w3-button btn addproject" >Add Project</button> -->
+                            </span>
+                        </div>
+                    </div>
+                </nav> 
+            </div>
+
+            <div *ngIf="show" id="id01" class="w3-modal">
+                <div class="w3-modal-content">
+                  <div class="w3-container">
+                    <span (click)="displayForm()"
+                    class="w3-button w3-display-topright">&times;</span>
+                    <!-- <span onclick="document.getElementById('id01').style.display='none'"
+                    class="w3-button w3-display-topright">&times;</span> -->
+                    <app-activity-form [title]="formHeading"></app-activity-form>
+                  </div>
+                </div>
+              </div>
+            <div class="list flex">
+                <app-activity-list></app-activity-list>
+            </div>
+        </div>
+    </div>
+  </div>
+  
+
+
+
+
+
+
+
+  
