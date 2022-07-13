@@ -12,86 +12,89 @@
                     <i class="fas fa-bell"></i>
                     <button (click)="displayForm()"
                     class="w3-button btn addproject" >Add Project</button> -->
-                    <!-- <button onclick="document.getElementById('id01').style.display='block'"
+<!-- <button onclick="document.getElementById('id01').style.display='block'"
                     class="w3-button btn addproject" >Add Project</button> -->
-                <!-- </span>
+<!-- </span>
             </div>
         </div>
     </nav>  -->
-   
-    <!-- <div *ngIf="show" id="id01" class="w3-modal">
+
+<!-- <div *ngIf="show" id="id01" class="w3-modal">
         <div class="w3-modal-content">
           <div class="w3-container">
             <span (click)="displayForm()"
             class="w3-button w3-display-topright">&times;</span> -->
-            <!-- <span onclick="document.getElementById('id01').style.display='none'"
+<!-- <span onclick="document.getElementById('id01').style.display='none'"
             class="w3-button w3-display-topright">&times;</span> -->
-            <!-- <app-project-form [title]="formTitle"></app-project-form>
+<!-- <app-project-form [title]="formTitle"></app-project-form>
           </div>
         </div>
       </div> -->
 
-      <!-- #BDE0FE -->
-      
-      <div class="container-fluid">
-        <div class="row">
-            <div class="col-md-2" style="background-color: #ffffff; min-height: 100vh;">
-                <app-navbar></app-navbar>
-            </div>
-            <div class="col-md-10" id="content">
-                <div id="nav" class="d-flex justify-content-center ">
-                    <nav class="navbar navbar-expand-lg bg-transparent">
-                        <div class="container-fluid">
-                            
-                            <div class="collapse navbar-collapse" id="navbarText">
-                                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                                    <li class="nav-item">
-                                        <a class="nav-link active" aria-current="page" href="#"></a>
-                                    </li>
-                                </ul>
-                                <span class="navbar-text">
-                                    <button (click)="displayForm()"
-                                    class="w3-button btn addproject" >Add Project</button>
-                                    <!-- <button onclick="document.getElementById('id01').style.display='block'"
+<!-- #BDE0FE -->
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-2" style="background-color: #ffffff; min-height: 100vh;">
+            <app-navbar></app-navbar>
+        </div>
+        <div class="col-md-10" id="content">
+            <div id="nav" class="d-flex justify-content-center ">
+                <nav class="navbar navbar-expand-lg bg-transparent">
+                    <div class="container-fluid">
+
+                        <div class="collapse navbar-collapse" id="navbarText">
+                            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                                <li class="nav-item">
+                                    <a class="nav-link active" aria-current="page" href="#"></a>
+                                </li>
+                            </ul>
+                            <span class="navbar-text">
+                                <button (click)="displayForm()" class="w3-button btn addproject">Add Project</button>
+                                <!-- <button onclick="document.getElementById('id01').style.display='block'"
                                     class="w3-button btn addproject" >Add Project</button> -->
-                                </span>
-                            </div>
+                            </span>
                         </div>
-                    </nav> 
-                </div>
-                
-                <div class="timerdiv flex">
-                    <app-timer [InputtedTime]="timer"></app-timer>
-                </div>
-                <div *ngIf="show" id="id01" class="w3-modal">
-                    <div class="w3-modal-content">
-                      <div class="w3-container">
-                        <span (click)="displayForm()"
-                        class="w3-button w3-display-topright">&times;</span>
+                    </div>
+                </nav>
+            </div>
+
+            <div class="timerdiv flex">
+                <app-timer [InputtedTime]="timer"></app-timer>
+            </div>
+            <div *ngIf="show" id="id01" class="w3-modal">
+                <div class="w3-modal-content">
+                    <div class="w3-container">
+                        <span (click)="displayForm()" class="w3-button w3-display-topright">&times;</span>
                         <!-- <span onclick="document.getElementById('id01').style.display='none'"
                         class="w3-button w3-display-topright">&times;</span> -->
                         <app-project-form [title]="formTitle" (setTimer)="getChildTime($event)"></app-project-form>
 
-                      </div>
                     </div>
-                  </div>
-                <div class="list flex">
-                    <app-project-list (startTimer)="childStartTimer($event)"></app-project-list>
+                </div>
+            </div>
+            <div class="list flex">
+                <app-project-list (startTimer)="childStartTimer($event)"></app-project-list>
+            </div>
+        </div>
+    </div>
+    <!-- modal -->
+    <div class="container">
+        <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Activity</button>
+
+        <!-- Modal -->
+        <div class="modal fade" id="myModal" role="dialog">
+            <div class="modal-dialog">
+
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <h3>Its time to take a break</h3>
+                    </div>
                 </div>
             </div>
         </div>
-      </div>
-      
-      
-    
-<!-- <div class="col-10 pt-4" style="text-align: justify;">
-    <app-timer></app-timer>
-    <app-navbar></app-navbar>
-</div> -->
-
-<!--  -->
-        
-    
-    
+    </div>
 
 
+</div>

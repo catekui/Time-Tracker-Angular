@@ -19,9 +19,8 @@
     <div class="text-center">
       <!-- <input [(ngModel)]="inputtedTime"> -->
       <h1 class="h1">{{InputtedTime}}:00</h1>
-      <button class="btn btn-primary mr-4" (click)="startTimer()">Start</button>
-      <button class="btn btn-info mr-4" (click)="pauseTimer()">Pause</button>
-    
+    <i class="fas fa-play fa-2x" ng-click="toggle()" ng-hide="pause"></i> 
+      <i class="fas fa-pause fa-2x" ng-click="toggle()" ng-hide="!pause"></i>
       
     </div>
   

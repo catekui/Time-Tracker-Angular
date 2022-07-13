@@ -17,43 +17,12 @@ export class TimerComponent implements OnInit {
     
   }
   myInterval:any = null;
-  paused: boolean = false;
-  activity = "run";
-  // n = 40; 
-  // pauseTime(){
-  //  if ()
+  paused: boolean = true;
 
-  //  }
-
-  // }
-
-  decrementn() {
-    // this.n = this.n - 1
-    this.InputtedTime = this.InputtedTime - 1
+  startTimer(){
+    if (this.InputtedTime > 0){
+      this.paused
+    }
   }
 
-  startTimer() {
-    this.myInterval = setInterval(() => {
-      this.decrementn()
-
-      if (this.InputtedTime <= 0) {
-        this.stopTimer()
-        // alert("session is over. Time to take a break " + this.activity)
-      }
-
-    }, 1000);
-  }
-
-  pauseTimer(){
-    clearInterval(this.myInterval) 
-
-  }
-
-  stopTimer(){
-    clearInterval(this.myInterval)
-    this.InputtedTime = 0;
-
-  }
-
-
-}
+ }
