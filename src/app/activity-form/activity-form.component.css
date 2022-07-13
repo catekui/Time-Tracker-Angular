@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:300,400,600&subset=latin-ext');
+*{
+  background-color:rgb(248, 200, 220);
+}
+input {
+  box-sizing: border-box;
+    border-radius: 3px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, .25);
+  font-family: 'Playfair Display', serif;
+  background-color: #D8BFD8;
+  width: 100%;
+  margin: 2px;
+  color: #ffffff;
+  font-size: 24px;
+}
+.btn{
+  padding: 6px;
+    background-image: linear-gradient(to left, rgba(255, 146, 202, 0.75) 0%, rgba(145, 149, 251, 0.86) 80%);
+}
+
+span {
+  font-size:30px;
+  font-weight:bold;
+  font-family: 'Playfair Display', serif;
+  align-items: center;
+  justify-content: center;
+  flex-items: center;
+}
