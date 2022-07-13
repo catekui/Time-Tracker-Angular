@@ -9,6 +9,8 @@ export class ProjectComponent implements OnInit {
   show = false;
   show2 = false;
   formTitle = "Add Project";
+  timer: number = 0;
+
 
   displayForm(){
     this.show = !this.show;
@@ -20,6 +22,10 @@ export class ProjectComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+  }
+  getChildTime(t:number ){
+    console.log(t)
+    this.timer = t
   }
 
 }

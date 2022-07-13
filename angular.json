@@ -27,18 +27,28 @@
             "tsConfig": "tsconfig.app.json",
             "assets": [
               "src/favicon.ico",
+
               "src/assets",
               "src/assets/bell.mp3",
 
               "src/assets/click.mp3"
           
+
+              "src/assets"
+    
+
             ],
             "styles": [
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.css"
             ],
             "scripts": [ 
               "src/assets/js/timer.js"
+
               
+
+
+  
 
             ]
           },

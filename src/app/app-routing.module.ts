@@ -9,6 +9,7 @@ import { LoginComponent } from './login/login.component';
 import { ProjectComponent } from './project/project.component';
 import { RatingFormComponent } from './rating-form/rating-form.component';
 import { RegisterComponent } from './register/register.component';
+import { BarchartComponent } from './components/barchart/barchart.component';
 
 
 const routes: Routes = [
@@ -22,6 +23,8 @@ const routes: Routes = [
   {path:'ratingform', component:RatingFormComponent},
   {path:'activity', component:ActivityComponent},
   {path:'activityform', component:ActivityFormComponent},
+  {path:'dashboard', component:BarchartComponent},
+
 ];
 
 @NgModule({

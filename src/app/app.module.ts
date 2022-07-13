@@ -31,6 +31,9 @@ import { ActivityComponent } from './components/activity/activity.component';
 import { ActivityFormComponent } from './activity-form/activity-form.component';
 import { ActivityListComponent } from './activity-list/activity-list.component';
 import { ActivitySummaryComponent } from './activity-summary/activity-summary.component';
+import { BarchartComponent } from './components/barchart/barchart.component';
+import { NgChartsModule } from 'ng2-charts';
+
 
 
 @NgModule({
@@ -63,16 +66,18 @@ import { ActivitySummaryComponent } from './activity-summary/activity-summary.co
      ActivityFormComponent,
      ActivityListComponent,
      ActivitySummaryComponent,
+     BarchartComponent,
+
 
 
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    NgChartsModule
   ],
 
   providers: [],
