@@ -27,6 +27,9 @@ import { ProjectListComponent } from './components/project-list/project-list.com
 import { ProjectSummaryComponent } from './components/project-summary/project-summary.component';
 
 import { RatingFormComponent } from './rating-form/rating-form.component';
+import { BarchartComponent } from './components/barchart/barchart.component';
+
+import { NgChartsModule } from 'ng2-charts';
 
 
 @NgModule({
@@ -55,6 +58,7 @@ import { RatingFormComponent } from './rating-form/rating-form.component';
     ProjectSummaryComponent,
 
     RatingFormComponent,
+     BarchartComponent,
 
 
   ],
@@ -63,7 +67,8 @@ import { RatingFormComponent } from './rating-form/rating-form.component';
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    NgChartsModule
   ],
 
   providers: [],
