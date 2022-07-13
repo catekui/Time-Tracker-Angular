@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
 .sidebar {
     height: 100vh;
     width: 210px;
@@ -45,8 +47,10 @@ display: block;
 }
 
 #content{
-    background-color: #E3F0FB;
+    background: rgba(189, 224, 254, 0.5);
+    /* background: #263F56; */
     border-radius: 3em 0 0 3em;
+    font-family: 'PT Sans', sans-serif !important;
 }
 
  nav{

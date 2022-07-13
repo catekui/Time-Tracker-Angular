@@ -28,11 +28,12 @@
       <option value="take a glass of water">Take a glass of water</option>
       </select>
   </div>
+
   
-
-  <div class="btns d-flex justify-content-between p-3">
-    <button class="form-buttons" (click)="clearInput()" type="button">Cancel</button>
-    <button class="form-buttons" type="submit" [disabled]="!project_form.valid">Add</button>
-  </div>
-
-</form>
+    <div class="btns d-flex justify-content-between p-3">
+      <button class="form-buttons" (click)="clearInput()" type="button">Cancel</button>
+      <button class="form-buttons" type="submit" [disabled]="!project_form.valid">Add</button>
+    </div>
+  
+  </form>
+</div>
