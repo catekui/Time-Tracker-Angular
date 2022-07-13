@@ -13,7 +13,7 @@ export class ProjectService {
   
     addProject(user:any,description:string, time_interval:number, break_interval:number, activity:string, date_added:any) {
       console.log(user)
-      return this.http.post(this.BASE_URL+"/project-create", {
+      return this.http.post(this.BASE_URL+"/api/project-create", {
         user:user,
         description:description,
         time_interval:time_interval,
@@ -34,7 +34,7 @@ export class ProjectService {
      
     editProject(projectId:number,description:string, time_interval:number, break_interval:number, activity:string) {
       
-      return this.http.post(this.BASE_URL+"/project-update/"+{projectId}, {
+      return this.http.post(this.BASE_URL+"/api/project-update/"+{projectId}, {
         
         description:description,
         time_interval:time_interval,

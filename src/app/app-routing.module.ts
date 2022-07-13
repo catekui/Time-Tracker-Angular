@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { ActivityFormComponent } from './activity-form/activity-form.component';
+import { ActivityComponent } from './components/activity/activity.component';
 import { ProjectFormComponent } from './components/project-form/project-form.component';
 import { ReportComponent } from './components/report/report.component';
 import { ReviewsComponent } from './components/reviews/reviews.component';
@@ -8,6 +10,8 @@ import { LoginComponent } from './login/login.component';
 import { ProjectComponent } from './project/project.component';
 import { RatingFormComponent } from './rating-form/rating-form.component';
 import { RegisterComponent } from './register/register.component';
+import { BarchartComponent } from './components/barchart/barchart.component';
+
 
 const routes: Routes = [
   {path: '', redirectTo:'landingpage', pathMatch:'full'},
@@ -19,6 +23,11 @@ const routes: Routes = [
   {path:'projectform', component:ProjectFormComponent},
   {path:'ratingform', component:RatingFormComponent},
   {path:'report', component:ReportComponent},
+
+  {path:'activity', component:ActivityComponent},
+  {path:'activityform', component:ActivityFormComponent},
+  {path:'dashboard', component:BarchartComponent},
+
 ];
 
 @NgModule({

@@ -5,6 +5,7 @@
     <label for = "description">Description of project</label>
    <input type="text" id="description" name="description" placeholder="Description" formControlName="description" required>
   </div>
+  
   <div class="form-group">
     
     <label for = "time_interval">Time interval(20-60mins)</label>
@@ -23,15 +24,16 @@
       <option value="stretch">Stretch</option>
       <option value="run">Run</option>
       <option value="take a walk">Take A walk</option>
-       <option value="listen to music">Listen to music</option>
-       <option value="take a glass of water">Take a glass of water</option>
+      <option value="listen to music">Listen to music</option>
+      <option value="take a glass of water">Take a glass of water</option>
       </select>
   </div>
+
   
-
-  <div class="btns d-flex justify-content-between p-3">
-    <button class="form-buttons" (click)="clearInput()" type="button">Cancel</button>
-    <button class="form-buttons" type="submit" [disabled]="!project_form.valid">Add</button>
-  </div>
-
-</form>
+    <div class="btns d-flex justify-content-between p-3">
+      <button class="form-buttons" (click)="clearInput()" type="button">Cancel</button>
+      <button class="form-buttons" type="submit" [disabled]="!project_form.valid">Add</button>
+    </div>
+  
+  </form>
+</div>
