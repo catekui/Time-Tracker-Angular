@@ -12,36 +12,36 @@ export class ProjectListComponent implements OnInit {
   formTitle = "Edit Project Details";
   projects: any;
   projId! :number;
-  minutesCount$: number = 5;
-  myInterval: any = null;
-  secondsCount$!:number;
+  // minutesCount$: number = 5;
+  // myInterval: any = null;
+  // secondsCount$!:number;
   
   
   constructor(private http: HttpClient, private projectservice: ProjectService) { }
 
   ngOnInit(): void {
     this.getProjects();
-    this.secondsCount$ = 60;
+    
   }
    
-  getTimer(){
-    return this.secondsCount$
-  }
+  // getTimer(){
+  //   return this.secondsCount$
+  // }
 
-  decrementTimer(minutes: number) {
-    this.minutesCount$ = minutes;
+  // decrementTimer(minutes: number) {
+  //   this.minutesCount$ = minutes;
     // secondsCount$= parseInt(secondsCount$) 
     // minutesCount$ = Number(minutes);
     // console.log(minutes, minutesCount$, secondsCount$)
-    this.myInterval = setInterval(this.updateTimer, 1000)
-  }
+  //   this.myInterval = setInterval(this.updateTimer, 1000)
+  // }
 
 
-  updateTimer(minutesCount$: number){
-    const minutes = this.getTimer()
+  // updateTimer(minutesCount$: number){
+  //   const minutes = this.getTimer()
     // this.secondsCount$ -1;
     // this.minutesCount$ = minutes;
-    console.log(minutes)
+    // console.log(minutes)
 //     if (secondsCount$ == 0){
 //       secondsCount$ = 60
 //       minutesCount$ --;
@@ -51,8 +51,8 @@ export class ProjectListComponent implements OnInit {
 
 //   }
 //  console.log(minutesCount$, secondsCount$)
- 
-  }
+// (click)="decrementTimer(project.time_interval)
+  // }
 
 
 

@@ -17,7 +17,6 @@ export class TimerComponent implements OnInit {
     
   }
   myInterval:any = null;
-  // InputtedTime  = 60;
   paused: boolean = false;
   activity = "run";
   // n = 40; 
@@ -39,10 +38,10 @@ export class TimerComponent implements OnInit {
 
       if (this.InputtedTime <= 0) {
         this.stopTimer()
-        alert("session is over. Time to take a break " + this.activity)
+        // alert("session is over. Time to take a break " + this.activity)
       }
 
-    }, 60000);
+    }, 1000);
   }
 
   pauseTimer(){
