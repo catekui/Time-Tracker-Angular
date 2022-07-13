@@ -1,16 +1,32 @@
+.form-style{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form{
+    width: 45vw;
+}
+
 input,select{
     background-color: #263F56;
     border-radius: 6px;
-    width: 100%;
+    width: 45vw;
     margin: 10px;
     color: #ffffff;
-    font-size: 24px;
+    font-size: 0.95vw;
+    padding: 0.3vw;
 }
+
+label{
+    margin-left: calc(0.65445vw);
+}
+
 h3{
     text-align: center;
 }
 .form-buttons{
     padding: 6px;
-    background-image: linear-gradient(to left, rgba(255, 146, 202, 0.75) 0%, rgba(145, 149, 251, 0.86) 80%);
-    
+    background: linear-gradient(101.68deg, #FFAFCC -70%, #A2D2FF 131.87%);
+    border-radius: 8px;
 }
