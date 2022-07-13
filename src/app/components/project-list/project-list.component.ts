@@ -1,5 +1,5 @@
 import { HttpClient } from '@angular/common/http';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { min } from 'rxjs';
 import { ProjectService } from 'src/app/service/project.service';
 
@@ -12,52 +12,26 @@ export class ProjectListComponent implements OnInit {
   formTitle = "Edit Project Details";
   projects: any;
   projId! :number;
+
   // minutesCount$: number = 5;
   // myInterval: any = null;
   // secondsCount$!:number;
   
   
   constructor(private http: HttpClient, private projectservice: ProjectService) { }
+  @Output() startTimer = new EventEmitter;
+
 
   ngOnInit(): void {
     this.getProjects();
     
   }
    
-  // getTimer(){
-  //   return this.secondsCount$
-  // }
-
-  // decrementTimer(minutes: number) {
-  //   this.minutesCount$ = minutes;
-    // secondsCount$= parseInt(secondsCount$) 
-    // minutesCount$ = Number(minutes);
-    // console.log(minutes, minutesCount$, secondsCount$)
-  //   this.myInterval = setInterval(this.updateTimer, 1000)
-  // }
-
-
-  // updateTimer(minutesCount$: number){
-  //   const minutes = this.getTimer()
-    // this.secondsCount$ -1;
-    // this.minutesCount$ = minutes;
-    // console.log(minutes)
-//     if (secondsCount$ == 0){
-//       secondsCount$ = 60
-//       minutesCount$ --;
-//     }
-//     if (minutesCount$ == 0 && secondsCount$ == 0) {
-//       clearInterval(this.myInterval)
-
-//   }
-//  console.log(minutesCount$, secondsCount$)
-// (click)="decrementTimer(project.time_interval)
-  // }
-
-
-
+  startCountdown(id:number, minutes:string){
+    this.startTimer.emit(minutes)
   
-
+  }
+  
 
 
     // Edit this to capture the id of the currentlty logged user not a number 1
@@ -125,3 +99,4 @@ export class ProjectListComponent implements OnInit {
         }
 
 }
+

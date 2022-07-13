@@ -12,6 +12,7 @@ export class ProjectComponent implements OnInit {
   timer: number = 0;
 
 
+
   displayForm(){
     this.show = !this.show;
     console.log(this.show);
@@ -26,6 +27,10 @@ export class ProjectComponent implements OnInit {
   getChildTime(t:number ){
     console.log(t)
     this.timer = t
+  }
+  childStartTimer(minutes:string){
+    this.timer =  parseInt(minutes)
+
   }
 
 }

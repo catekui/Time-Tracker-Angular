@@ -71,11 +71,12 @@
                         <!-- <span onclick="document.getElementById('id01').style.display='none'"
                         class="w3-button w3-display-topright">&times;</span> -->
                         <app-project-form [title]="formTitle" (setTimer)="getChildTime($event)"></app-project-form>
+
                       </div>
                     </div>
                   </div>
                 <div class="list flex">
-                    <app-project-list></app-project-list>
+                    <app-project-list (startTimer)="childStartTimer($event)"></app-project-list>
                 </div>
             </div>
         </div>
