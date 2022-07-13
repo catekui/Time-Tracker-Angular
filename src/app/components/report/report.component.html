@@ -1,1 +1,47 @@
+ 
+      <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-2" style="background-color: #ffffff; min-height: 100vh;">
+                <app-navbar></app-navbar>
+            </div>
+            <div class="col-md-10" id="content">
+                <div id="nav" class="d-flex justify-content-center ">
+                    <nav class="navbar navbar-expand-lg bg-transparent">
+                        <div class="container-fluid">
+                            
+                            <div class="collapse navbar-collapse" id="navbarText">
+                                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                                    <li class="nav-item">
+                                        <a class="nav-link active" aria-current="page" href="#"></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </nav> 
+                </div>
+                 <div class="mt-52">
+                  <table class="table-auto ml-40">
+                     <thead>
+                       <tr>
+                         <th>I</th>
+                         <th>Project</th>
+                         <th>Date project was done</th>
+                         <th>Time worked on Project</th>
+                       </tr>
+                     </thead>
+                     <tbody>
+                       <tr *ngFor="let project of projects; let i = index">
+                         <td>{{i+1}}</td>
+                         <td>{{project.description}}</td>
+                         <td>{{project.date_added}}</td>
+                         <td>{{project.time_interval}} minutes</td>
+                         
+                       </tr>
+                      
+                     </tbody>
+                   </table>
+                 </div>
+            </div>
+        </div>
+      </div>
 
