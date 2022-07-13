@@ -1,0 +1,109 @@
+.sidebar {
+  height: 100vh;
+  width: 210px;
+  padding: 6px 14px;
+  background: #E3F0FB;
+}
+
+.sidebar li {
+  list-style: none;
+  height: 50px;
+  line-height: 50px;
+  width: 100%;
+  position: relative;
+  margin: 0 5px;
+  border-radius: 12px;
+}
+.sidebar li a {
+  color: black;
+  display: flex;
+  align-items: center;
+  text-decoration: none; 
+  transition: all 0.4s ease; 
+}
+.sidebar li a:hover{
+  color: #BDE0FE;
+  background: #fff;
+
+}
+.sidebar li a i {
+  height: 50px;
+  min-width: 50px;
+  border-radius: 12px;
+  line-height: 50px;
+} 
+
+/* navbar inline */
+.addproject, .addproject:hover{
+  background: linear-gradient(101.68deg, #FFAFCC -70%, #A2D2FF 131.87%);
+  color: #fff;
+  font-weight: 700;
+}
+
+#id01{
+display: block;
+}
+
+#content{
+  background-color: #BDE0FE;
+  border-radius: 3em 0 0 3em;
+}
+
+nav{
+  width: 80%;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.flex{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.list{
+  width: 100%;
+  margin: 0 !important;
+}
+
+
+
+#id01,#id02{
+  display: block;
+}
+
+table{
+  box-sizing: border-box;
+  width: 65vw;
+  margin-top: 2.5vh;
+  padding: 1vw !important;
+  border: 0.0625rem solid #000000;
+  border-radius: 0.5rem 0.5rem 0 0 !important;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 0.15rem 0.3rem 0rem rgba(0,0,0,0.2);
+}
+
+thead{
+  background: rgba(205, 180, 219, 0.4);
+  /* border: 0.125rem solid #000000; */
+}
+
+thead tr{
+  border-radius: 0.5rem 0.5rem 0 0 !important;
+  padding: 2vw 0.5vw !important;
+  border-bottom: 0.08125rem solid #000000;
+}
+
+tbody{
+  background: rgba(189, 224, 254, 0.541) !important;
+}
+
+tbody tr{
+  border-bottom: 0.03125rem solid #000000;
+}
+
+thead tr th, tbody tr td{
+  text-align: center !important;
+  margin: 0 !important;
+  padding: 0.8vw 0.5vw 0.5vw 0.5vw;
+}

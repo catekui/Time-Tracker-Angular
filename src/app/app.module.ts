@@ -69,7 +69,6 @@ import { NgChartsModule } from 'ng2-charts';
      BarchartComponent,
 
 
-
   ],
   imports: [
     BrowserModule,
