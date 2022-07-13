@@ -27,7 +27,6 @@ import { ProjectListComponent } from './components/project-list/project-list.com
 import { ProjectSummaryComponent } from './components/project-summary/project-summary.component';
 
 import { RatingFormComponent } from './rating-form/rating-form.component';
-import { ProfileComponent } from './profile/profile.component';
 
 
 @NgModule({
@@ -56,8 +55,6 @@ import { ProfileComponent } from './profile/profile.component';
     ProjectSummaryComponent,
 
     RatingFormComponent,
-     ProfileComponent,
-
 
   ],
   imports: [
