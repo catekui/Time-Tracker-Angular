@@ -2,8 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-
-
+import { DataTablesModule } from 'angular-datatables';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -30,6 +29,7 @@ import { RatingFormComponent } from './rating-form/rating-form.component';
 import { BarchartComponent } from './components/barchart/barchart.component';
 
 import { NgChartsModule } from 'ng2-charts';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 @NgModule({
@@ -65,11 +65,12 @@ import { NgChartsModule } from 'ng2-charts';
   imports: [
     BrowserModule,
     AppRoutingModule,
-
+    DataTablesModule,
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
-    NgChartsModule
+    NgChartsModule,
+    BrowserAnimationsModule
   ],
 
   providers: [],

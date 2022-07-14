@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
-import { Component, OnInit } from '@angular/core';
+import { Component, Inject, OnInit, ViewChild } from '@angular/core';
+import { NgForm } from '@angular/forms';
 import { ProjectService } from 'src/app/service/project.service';
 
 @Component({
@@ -11,8 +12,10 @@ export class ProjectListComponent implements OnInit {
   formTitle = "Edit Project Details";
   projects: any;
   projId! :number;
+  @ViewChild('project_form')
+  project_form!: NgForm;
   
-  constructor(private http: HttpClient, private projectservice: ProjectService) { }
+  constructor(private http: HttpClient, private projectservice: ProjectService,) { }
 
   ngOnInit(): void {
     this.getProjects();
@@ -54,11 +57,17 @@ export class ProjectListComponent implements OnInit {
         displayForm2(){
           this.show2 = !this.show2;
         }
-        editProject(anId:number){
+        editProject(id: string){
           
-          this.show = !this.show;
+          this.show= !this.show;
           console.log(this.show)
-    
+          let currentProject = this.projects.find((p: { id: string; })=>{ return p.id === id })
+          console.log(currentProject)
+          // this.project_form.setValue({
+          //   break_interval: currentProject.break_interval,
+          //   description: currentProject.description,
+          //   time_interval: currentProject.time_interval
+          // })
         };
 
           

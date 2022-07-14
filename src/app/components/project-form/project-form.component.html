@@ -1,7 +1,6 @@
-<div class="form-style">
-  <form [formGroup]="project_form"  (ngSubmit)="onSubmit()">
+<form [formGroup]="project_form"  (ngSubmit)="onSubmit()">
     <h3 class="mt-2">{{title}}</h3>
-  
+
     <div class="form-group">
       <label for = "description">Description of project</label>
      <input type="text" id="description" name="description" placeholder="Description" formControlName="description" required>
@@ -20,7 +19,7 @@
     <div class="form-group">
       <label for = "activity">Select Activity</label>
       <select  id="activity" name="activity" formControlName="activity" required>
-        <option value="meditation" selected>Meditation  </option>
+        <option value="meditation" selected>Meditation</option>
         <option value="stretch">Stretch</option>
         <option value="run">Run</option>
         <option value="take a walk">Take A walk</option>
@@ -36,4 +35,3 @@
     </div>
   
   </form>
-</div>
