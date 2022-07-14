@@ -1,5 +1,10 @@
+<<<<<<< HEAD
+import { Component, Input, OnInit } from '@angular/core';
+import { FormControl, FormGroup, FormBuilder } from '@angular/forms';
+=======
 import { Component, Input, OnInit, EventEmitter, Output } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
+>>>>>>> 0e241306f37fffd2abcae2b5f0d813da385cf908
 import {HttpClient } from '@angular/common/http';
 import {Router } from '@angular/router';
 import { ProjectService } from 'src/app/service/project.service';

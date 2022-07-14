@@ -1,6 +1,14 @@
 import { HttpClient } from '@angular/common/http';
+
+import { Component, Inject, OnInit, ViewChild } from '@angular/core';
+import { NgForm } from '@angular/forms';
+
+import { Component, OnInit } from '@angular/core';
+
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+
 import { min } from 'rxjs';
+
 import { ProjectService } from 'src/app/service/project.service';
 
 @Component({
@@ -12,6 +20,15 @@ export class ProjectListComponent implements OnInit {
   formTitle = "Edit Project Details";
   projects: any;
   projId! :number;
+
+  @ViewChild('project_form')
+  project_form!: NgForm;
+
+  minutesCount$: number = 5;
+  myInterval: any = null;
+  secondsCount$!:number;
+  
+
   activeProject: number = -1;
 
 
@@ -22,8 +39,9 @@ export class ProjectListComponent implements OnInit {
 
 
 
+
   
-  constructor(private http: HttpClient, private projectservice: ProjectService) { }
+  constructor(private http: HttpClient, private projectservice: ProjectService,) { }
 
   @Output() startTimer = new EventEmitter;
 
@@ -92,11 +110,17 @@ export class ProjectListComponent implements OnInit {
         displayForm2(){
           this.show2 = !this.show2;
         }
-        editProject(anId:number){
+        editProject(id: string){
           
-          this.show = !this.show;
+          this.show= !this.show;
           console.log(this.show)
-    
+          let currentProject = this.projects.find((p: { id: string; })=>{ return p.id === id })
+          console.log(currentProject)
+          // this.project_form.setValue({
+          //   break_interval: currentProject.break_interval,
+          //   description: currentProject.description,
+          //   time_interval: currentProject.time_interval
+          // })
         };
 
           

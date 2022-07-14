@@ -14,7 +14,7 @@ import { BarchartComponent } from './components/barchart/barchart.component';
 
 
 const routes: Routes = [
-  {path: '', redirectTo:'landingpage', pathMatch:'full'},
+  {path: '', redirectTo:'project', pathMatch:'full'},
   {path:'login', component: LoginComponent},
   {path:'register', component: RegisterComponent},
   {path:'landingpage', component:LandingpageComponent},

@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway:300,400,600&subset=latin-ext');
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
 *{
     background-color: #f9d1d1;
     box-sizing: border-box;
@@ -15,7 +17,7 @@
   }
 
   .ui-input input {
-    font-family: $base-font-family;
+    font-family: 'PT Sans', sans-serif !important;
     border: 0;
     background: none;
     padding: 16px 0 16px 0;
@@ -26,7 +28,7 @@
     touch-callout: none;
   }
   label{
-    font-family: $base-font-family;
+    font-family: 'PT Sans', sans-serif !important;
     border: 0;
     background: none;
     padding: 16px 0 16px 0;
@@ -47,11 +49,9 @@
     letter-spacing: .0875em;
     font-weight: 500;
     color: #ffffff;
-    font-family: $base-font-family;
+    font-family: 'PT Sans', sans-serif !important;
     border-radius: 100px;
     outline: 0;
-    transition: background-color $time $bezier,
-                color $time $bezier;
   }
   
   .btn:focus,.btn:active,
@@ -104,7 +104,7 @@
 
   }
   h1 {
-    font-family: "Texta", $base-font-family;
+    font-family: 'PT Sans', sans-serif !important;
     font-weight: 700;
     font-size:30px;
     text-transform: uppercase;
