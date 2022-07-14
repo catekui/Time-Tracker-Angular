@@ -69,7 +69,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
      BarchartComponent,
 
 
-
   ],
   imports: [
     BrowserModule,

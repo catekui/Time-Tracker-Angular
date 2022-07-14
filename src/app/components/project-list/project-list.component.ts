@@ -1,11 +1,14 @@
 import { HttpClient } from '@angular/common/http';
-<<<<<<< HEAD
+
 import { Component, Inject, OnInit, ViewChild } from '@angular/core';
 import { NgForm } from '@angular/forms';
-=======
+
 import { Component, OnInit } from '@angular/core';
+
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+
 import { min } from 'rxjs';
->>>>>>> 0e241306f37fffd2abcae2b5f0d813da385cf908
+
 import { ProjectService } from 'src/app/service/project.service';
 
 @Component({
@@ -17,57 +20,61 @@ export class ProjectListComponent implements OnInit {
   formTitle = "Edit Project Details";
   projects: any;
   projId! :number;
-<<<<<<< HEAD
+
   @ViewChild('project_form')
   project_form!: NgForm;
-=======
+
   minutesCount$: number = 5;
   myInterval: any = null;
   secondsCount$!:number;
   
->>>>>>> 0e241306f37fffd2abcae2b5f0d813da385cf908
+
+  activeProject: number = -1;
+
+
+  // minutesCount$: number = 5;
+  // myInterval: any = null;
+  // secondsCount$!:number;
+  
+
+
+
+
   
   constructor(private http: HttpClient, private projectservice: ProjectService,) { }
+
+  @Output() startTimer = new EventEmitter;
+
+
+  checkIndex(id:number){
+    if (this.activeProject == id){
+      return "activeproject"
+    } 
+    return ""
+  }
+
+
+
+  changeButton(id:number){
+    if (this.activeProject == id){
+      return true
+    }
+    return false
+
+  }
+
 
   ngOnInit(): void {
     this.getProjects();
-    this.secondsCount$ = 60;
+    
   }
    
-  getTimer(){
-    return this.secondsCount$
+  startCountdown(id:number, minutes:string, break_interval:number, description:string){
+    this.activeProject = id;
+    this.startTimer.emit([minutes, break_interval, id, description])
+    
   }
-
-  decrementTimer(minutes: number) {
-    this.minutesCount$ = minutes;
-    // secondsCount$= parseInt(secondsCount$) 
-    // minutesCount$ = Number(minutes);
-    // console.log(minutes, minutesCount$, secondsCount$)
-    this.myInterval = setInterval(this.updateTimer, 1000)
-  }
-
-
-  updateTimer(minutesCount$: number){
-    const minutes = this.getTimer()
-    // this.secondsCount$ -1;
-    // this.minutesCount$ = minutes;
-    console.log(minutes)
-//     if (secondsCount$ == 0){
-//       secondsCount$ = 60
-//       minutesCount$ --;
-//     }
-//     if (minutesCount$ == 0 && secondsCount$ == 0) {
-//       clearInterval(this.myInterval)
-
-//   }
-//  console.log(minutesCount$, secondsCount$)
- 
-  }
-
-
-
   
-
 
 
     // Edit this to capture the id of the currentlty logged user not a number 1
@@ -76,10 +83,8 @@ export class ProjectListComponent implements OnInit {
       this.projectservice.getUserProjects(1).subscribe(
          (data) => {
           this.projects = data;
-      
+          console.log(data)
         },
-      
-      
       )};
 
 
@@ -141,3 +146,4 @@ export class ProjectListComponent implements OnInit {
         }
 
 }
+

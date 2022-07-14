@@ -30,11 +30,11 @@
 
               "src/assets",
               "src/assets/bell.mp3",
+              "src/assets/click.mp3",
+             
 
-              "src/assets/click.mp3"
+              "src/assets/click.mp3",
           
-
-              "src/assets"
     
 
             ],
@@ -44,11 +44,6 @@
             ],
             "scripts": [ 
               "src/assets/js/timer.js"
-
-              
-
-
-  
 
             ]
           },

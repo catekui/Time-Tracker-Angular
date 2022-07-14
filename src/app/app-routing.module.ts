@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { ActivityFormComponent } from './activity-form/activity-form.component';
 import { ActivityComponent } from './components/activity/activity.component';
 import { ProjectFormComponent } from './components/project-form/project-form.component';
+import { ReportComponent } from './components/report/report.component';
 import { ReviewsComponent } from './components/reviews/reviews.component';
 import { LandingpageComponent } from './landingpage/landingpage.component';
 import { LoginComponent } from './login/login.component';
@@ -21,6 +22,8 @@ const routes: Routes = [
   {path:'reviews', component:ReviewsComponent},
   {path:'projectform', component:ProjectFormComponent},
   {path:'ratingform', component:RatingFormComponent},
+  {path:'report', component:ReportComponent},
+
   {path:'activity', component:ActivityComponent},
   {path:'activityform', component:ActivityFormComponent},
   {path:'dashboard', component:BarchartComponent},

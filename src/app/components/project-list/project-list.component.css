@@ -38,3 +38,6 @@ thead tr th, tbody tr td{
     margin: 0 !important;
     padding: 0.8vw 0.5vw 0.5vw 0.5vw;
 }
+.activeproject {
+    background: white;
+}

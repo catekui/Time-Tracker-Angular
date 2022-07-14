@@ -6,7 +6,11 @@
         class="w3-button w3-display-topright">&times;</span>
         <!-- <span onclick="document.getElementById('id01').style.display='none'"
         class="w3-button w3-display-topright">&times;</span> -->
+
         <app-project-form [title]="formTitle" [title]="formTitle" #project_form></app-project-form>
+
+        <!-- <app-project-form [title]="formTitle" [title]="formTitle"></app-project-form> -->
+
       </div>
     </div>
   </div>
@@ -18,7 +22,7 @@
         class="w3-button w3-display-topright">&times;</span>
         <!-- <span onclick="document.getElementById('id01').style.display='none'"
         class="w3-button w3-display-topright">&times;</span> -->
-        <app-project-summary></app-project-summary>
+        <!-- <app-project-summary></app-project-summary> -->
       </div>
     </div>
   </div>
@@ -26,7 +30,7 @@
 
 
 
-<table class="table-auto">
+<table class="table-auto"  >
     <thead>
       <tr>
         <th>I</th>
@@ -38,11 +42,11 @@
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let project of projects; let i = index">
+      <tr *ngFor="let project of projects; let i = index" [ngClass]="checkIndex(project.id)"  >
         <td>{{i+1}}</td>
         <td (click)="displayForm2()">{{project.description}}</td>
-        <td>{{project.time_interval}} minutes</td>
-        <td (click)="decrementTimer(project.time_interval)"><i class="fas fa-play"></i></td>
+        <td> {{project.time_interval}} minutes</td>
+        <td (click)="startCountdown(project.id, project.time_interval, project.break_interval, project.description)"><i class="fas fa-play" *ngIf="!changeButton(project.id)" ></i><i class="fa fa-pause" *ngIf="changeButton(project.id)"></i></td>
         <td (click)="editProject(project.id)"><i class="fas fa-edit"></i></td>
         <td (toDelete)='deleteProjectNow(project.id)' (click)="deleteProject(project.id)"><i class="fa-solid fa-circle"></i></td>
       </tr>

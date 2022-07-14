@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ReportService } from 'src/app/services/report.service';
 
 @Component({
   selector: 'app-report',
@@ -7,9 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ReportComponent implements OnInit {
 
-  constructor() { }
+  constructor(private reportservice: ReportService) { }
 
+  projects: any
   ngOnInit(): void {
-  }
+    
+      this.reportservice.getUserProjects(1).subscribe(
+         (data) => {
+          this.projects = data; 
+        },
+      
+      
+      )};
+  
 
 }
