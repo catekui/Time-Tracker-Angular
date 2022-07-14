@@ -16,7 +16,7 @@ export class PanelComponent implements OnInit {
   constructor(private http: HttpClient, private projectservice: ProjectService) { }
 
   ngOnInit(): void {
-    this.projects = this.getProjects();
+    // this.projects = this.getProjects();
 
  
       
@@ -27,16 +27,16 @@ export class PanelComponent implements OnInit {
 
 
   // Edit this to capture the id of the currentlty logged user not a number 1
-  getProjects = ()=> {
+  // getProjects = ()=> {
     
-    this.projectservice.getUserProjects(1).subscribe(
-       (data) => {
-        this.projects = data;
+  //   this.projectservice.getUserProjects(1).subscribe(
+  //      (data) => {
+  //       this.projects = data;
     
-      },
+  //     },
     
     
-    )};
+  //   )};
 
     
     

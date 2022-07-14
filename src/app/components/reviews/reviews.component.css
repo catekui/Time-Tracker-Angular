@@ -100,12 +100,14 @@ display: block;
     color: #263F56;
     font-size: 1.5vw;
     font-weight: 700;
+    font-family: 'PT Sans', sans-serif !important;
 }
 
 .img-content h5{
     font-size: 1.1vw;
     color: #263F56;
     padding: 0.3vw 0;
+    font-family: 'PT Sans', sans-serif !important;
 }
 
 .rev-stars{
@@ -124,7 +126,7 @@ display: block;
     z-index: 1;
     width: 6.5vw;
     height: 12.3vh;
-    border-radius: 1.6vw;
+    border-radius: 50%;
     display: block;
     margin-bottom: calc(-5vh);
     margin-left: calc(3vw);
@@ -169,6 +171,7 @@ display: block;
     color: #ffffff;
     font-size: 2.3vw;
     font-weight: 700;
+    font-family: 'PT Sans', sans-serif !important;
 }
 
 .first span{
@@ -177,6 +180,7 @@ display: block;
     font-weight: 500;
     font-size: 1.4vw;
     margin-left: calc(1.8vw);
+    font-family: 'PT Sans', sans-serif !important;
 }
 
 .second{
@@ -195,6 +199,7 @@ display: block;
     color: #ffffff;
     font-weight: 700;
     font-size: 1.2vw;
+    font-family: 'PT Sans', sans-serif !important;
 }
 
 .align span{
@@ -203,13 +208,87 @@ display: block;
     font-weight: 500;
     font-size: 1.2vw;
     padding-top: calc(4.5vh);
+    font-family: 'PT Sans', sans-serif !important;
 }
 
 .share{
     display: flex;
+    align-items: center;
+    justify-content: space-evenly;
 }
 
 .share button{
     background: linear-gradient(101.68deg, #FFAFCC -70%, #A2D2FF 131.87%);
-    border-radius: 0.06125rem;
+    border-radius: 0.125rem;
+    border: 0;
+    padding: 0.3vw 0.6vw;
+    font-size: 1vw;
+    line-height: 1.5;
+    text-transform: uppercase;
+    letter-spacing: .0875em;
+    font-weight: 700;
+    width: fit-content;
+    height: fit-content;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+    color: #ffffff;
+    font-family: 'PT Sans', sans-serif !important;
+    outline: 0;
+}
+
+.share h2{
+    font-size: 1.45vw;
+    font-weight: 700;
+    color: #263F56;
+    font-family: 'PT Sans', sans-serif !important;
+}
+
+.subscribe{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.sub{
+    font-size: 1.6vw;
+    font-weight: 700;
+    color: #263F56;
+}
+
+.mail{
+    display: flex;
+    flex-direction: column;
+}
+
+.mail input::placeholder{
+    padding: 0.3rem;
+    color: #263F56;
+    font-size: 1.05vw;
+    font-weight: 700;
+}
+
+.mail input[type="email"]{
+    box-sizing: border-box;
+    padding: 0.4rem;
+    background: #BDE0FE;
+    border: 2px solid #263F56;
+    border-radius: 0.5rem;
+}
+
+.mail button{
+    background: linear-gradient(101.68deg, #FFAFCC -70%, #A2D2FF 131.87%);
+    border-radius: 0.5rem;
+    border: 0;
+    padding: 0.3vw 0.6vw;
+    font-size: 1vw;
+    line-height: 1.5;
+    text-transform: uppercase;
+    letter-spacing: .0875em;
+    font-weight: 700;
+    /* width: 8vw; */
+    height: fit-content;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+    color: #ffffff;
+    font-family: 'PT Sans', sans-serif !important;
+    outline: 0;
+    margin-top: calc(2vh);
 }

@@ -1,5 +1,10 @@
+<<<<<<< HEAD
+import { Component, Input, OnInit } from '@angular/core';
+import { FormControl, FormGroup, FormBuilder } from '@angular/forms';
+=======
 import { Component, Input, OnInit, EventEmitter, Output } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
+>>>>>>> 0e241306f37fffd2abcae2b5f0d813da385cf908
 import {HttpClient } from '@angular/common/http';
 import {Router } from '@angular/router';
 import { ProjectService } from 'src/app/service/project.service';
@@ -27,6 +32,11 @@ export class ProjectFormComponent implements OnInit {
  
 
  @Output() setTimer = new EventEmitter()
+ @Output() project = new EventEmitter()
+
+ 
+
+
  
  clearInput(){
   this.project_form.reset()
@@ -54,20 +64,24 @@ export class ProjectFormComponent implements OnInit {
     this.newProject.break_interval = this.project_form.value.break_interval;
     this.newProject.date_added = new Date()
 
-    this.newProject.user = 1;
+    
     
 
-    this.projectservice.addProject(this.newProject.user,this.newProject.description, this.newProject.time_interval,this.newProject.break_interval, this.newProject.activity, this.newProject.date_added).subscribe(
+    this.projectservice.addProject(this.newProject.description, this.newProject.time_interval,this.newProject.break_interval,this.newProject.date_added).subscribe(
       newProject => {
-       
-        newProject = newProject
         console.log(newProject)
+        this.project.emit(newProject)
+        return newProject = newProject
+        
       }
     )
 
     this.setTimer.emit(this.project_form.value.time_interval)
+    
+ 
     // this.newProject = new Project(new Project("","",0,0,"",new Date()))
     this.project_form.reset()
+    
     
     
   }

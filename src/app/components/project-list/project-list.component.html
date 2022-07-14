@@ -6,7 +6,11 @@
         class="w3-button w3-display-topright">&times;</span>
         <!-- <span onclick="document.getElementById('id01').style.display='none'"
         class="w3-button w3-display-topright">&times;</span> -->
+
+        <app-project-form [title]="formTitle" [title]="formTitle" #project_form></app-project-form>
+
         <!-- <app-project-form [title]="formTitle" [title]="formTitle"></app-project-form> -->
+
       </div>
     </div>
   </div>
@@ -46,14 +50,14 @@
         <td (click)="editProject(project.id)"><i class="fas fa-edit"></i></td>
         <td (toDelete)='deleteProjectNow(project.id)' (click)="deleteProject(project.id)"><i class="fa-solid fa-circle"></i></td>
       </tr>
+      <tr *ngIf="lastProject.time_interval>0">
+        <td> {{projects.length+1}}</td>
+        <td (click)="displayForm2()">{{lastProject.description}}</td>
+        <td> {{lastProject.time_interval}} minutes</td>
+        <td (click)="startCountdown(lastProject.id, lastProject.time_interval)"><i class="fas fa-play"></i></td>
+        <td (click)="editProject(lastProject.id)"><i class="fas fa-edit"></i></td>
+        <td (toDelete)='deleteProjectNow(lastProject.id)' (click)="deleteProject(lastProject.id)"><i class="fa-solid fa-circle"></i></td>
+      </tr>
     </tbody>
   </table>
-  ​
 
-
-
-
-
-
-
-  
