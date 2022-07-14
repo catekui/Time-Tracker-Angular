@@ -1,6 +1,11 @@
 import { HttpClient } from '@angular/common/http';
+<<<<<<< HEAD
 import { Component, Inject, OnInit, ViewChild } from '@angular/core';
 import { NgForm } from '@angular/forms';
+=======
+import { Component, OnInit } from '@angular/core';
+import { min } from 'rxjs';
+>>>>>>> 0e241306f37fffd2abcae2b5f0d813da385cf908
 import { ProjectService } from 'src/app/service/project.service';
 
 @Component({
@@ -12,14 +17,57 @@ export class ProjectListComponent implements OnInit {
   formTitle = "Edit Project Details";
   projects: any;
   projId! :number;
+<<<<<<< HEAD
   @ViewChild('project_form')
   project_form!: NgForm;
+=======
+  minutesCount$: number = 5;
+  myInterval: any = null;
+  secondsCount$!:number;
+  
+>>>>>>> 0e241306f37fffd2abcae2b5f0d813da385cf908
   
   constructor(private http: HttpClient, private projectservice: ProjectService,) { }
 
   ngOnInit(): void {
     this.getProjects();
+    this.secondsCount$ = 60;
   }
+   
+  getTimer(){
+    return this.secondsCount$
+  }
+
+  decrementTimer(minutes: number) {
+    this.minutesCount$ = minutes;
+    // secondsCount$= parseInt(secondsCount$) 
+    // minutesCount$ = Number(minutes);
+    // console.log(minutes, minutesCount$, secondsCount$)
+    this.myInterval = setInterval(this.updateTimer, 1000)
+  }
+
+
+  updateTimer(minutesCount$: number){
+    const minutes = this.getTimer()
+    // this.secondsCount$ -1;
+    // this.minutesCount$ = minutes;
+    console.log(minutes)
+//     if (secondsCount$ == 0){
+//       secondsCount$ = 60
+//       minutesCount$ --;
+//     }
+//     if (minutesCount$ == 0 && secondsCount$ == 0) {
+//       clearInterval(this.myInterval)
+
+//   }
+//  console.log(minutesCount$, secondsCount$)
+ 
+  }
+
+
+
+  
+
 
 
     // Edit this to capture the id of the currentlty logged user not a number 1

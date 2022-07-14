@@ -59,8 +59,9 @@
                         </div>
                     </nav> 
                 </div>
+                
                 <div class="timerdiv flex">
-                    <app-timer></app-timer>
+                    <app-timer [InputtedTime]="timer"></app-timer>
                 </div>
                 <div *ngIf="show" id="id01" class="w3-modal">
                     <div class="w3-modal-content">
@@ -69,7 +70,7 @@
                         class="w3-button w3-display-topright">&times;</span>
                         <!-- <span onclick="document.getElementById('id01').style.display='none'"
                         class="w3-button w3-display-topright">&times;</span> -->
-                        <app-project-form [title]="formTitle"></app-project-form>
+                        <app-project-form [title]="formTitle" (setTimer)="getChildTime($event)"></app-project-form>
                       </div>
                     </div>
                   </div>

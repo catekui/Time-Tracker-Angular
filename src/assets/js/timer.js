@@ -1,6 +1,6 @@
 // Required variables
 var session_seconds = "00";
-var session_minutes = 1;
+var session_minutes = 0;
 
 // Audio files
 var click_sound = new Audio("click.mp3");
@@ -17,7 +17,7 @@ function start_timer() {
 
   // Change the minutes and seconds to starting time
   session_minutes = 00;
-  session_seconds = 05;
+  session_seconds = 00;
 
   // Add the seconds and minutes to the page
   document.getElementById("minutes").innerHTML = session_minutes;

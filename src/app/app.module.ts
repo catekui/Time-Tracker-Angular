@@ -26,10 +26,14 @@ import { ProjectListComponent } from './components/project-list/project-list.com
 import { ProjectSummaryComponent } from './components/project-summary/project-summary.component';
 
 import { RatingFormComponent } from './rating-form/rating-form.component';
+import { ActivityComponent } from './components/activity/activity.component';
+import { ActivityFormComponent } from './activity-form/activity-form.component';
+import { ActivityListComponent } from './activity-list/activity-list.component';
+import { ActivitySummaryComponent } from './activity-summary/activity-summary.component';
 import { BarchartComponent } from './components/barchart/barchart.component';
-
 import { NgChartsModule } from 'ng2-charts';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 
 
 @NgModule({
@@ -58,14 +62,22 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     ProjectSummaryComponent,
 
     RatingFormComponent,
+     ActivityComponent,
+     ActivityFormComponent,
+     ActivityListComponent,
+     ActivitySummaryComponent,
      BarchartComponent,
+
 
 
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+<<<<<<< HEAD
     DataTablesModule,
+=======
+>>>>>>> 0e241306f37fffd2abcae2b5f0d813da385cf908
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,

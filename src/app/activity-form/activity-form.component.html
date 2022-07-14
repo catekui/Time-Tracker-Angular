@@ -1,0 +1,15 @@
+<body>
+    <div class="container">
+    <form [formGroup]="activity_form" (ngSubmit)="onSubmit()">
+        <div class="form">
+          <label class="form-fieldset ui-input">
+            <input formControlName="activity" name = "activity" placeholder="Activity">
+          </label>
+        </div>
+        <div class="form-footer">
+        <button class="btn" type="submit"[disabled]="!activity_form.valid" >{{title}}</button>
+        </div>
+      </form>
+    </div>
+
+    </body>

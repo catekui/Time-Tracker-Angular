@@ -1,12 +1,11 @@
-
-  <div *ngIf="show" id="id01" class="w3-modal">
+<div *ngIf="show" id="id01" class="w3-modal">
     <div class="w3-modal-content">
       <div class="w3-container">
         <span (click)="displayForm()"
         class="w3-button w3-display-topright">&times;</span>
         <!-- <span onclick="document.getElementById('id01').style.display='none'"
         class="w3-button w3-display-topright">&times;</span> -->
-        <app-project-form [title]="formTitle" [title]="formTitle" #project_form></app-project-form>
+        <app-activity-form [title]="formHeading" [title]="formHeading"></app-activity-form>
       </div>
     </div>
   </div>
@@ -18,7 +17,7 @@
         class="w3-button w3-display-topright">&times;</span>
         <!-- <span onclick="document.getElementById('id01').style.display='none'"
         class="w3-button w3-display-topright">&times;</span> -->
-        <app-project-summary></app-project-summary>
+        <app-activity-summary></app-activity-summary>
       </div>
     </div>
   </div>
@@ -30,21 +29,18 @@
     <thead>
       <tr>
         <th>I</th>
-        <th>Project</th>
-        <th>Working Interval</th>
-        <th>Start</th>
+        <th>Activity</th>
         <th>Edit</th>
         <th>Delete</th>
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let project of projects; let i = index">
+      <tr *ngFor="let activity of activities; let i = index">
         <td>{{i+1}}</td>
-        <td (click)="displayForm2()">{{project.description}}</td>
-        <td>{{project.time_interval}} minutes</td>
-        <td (click)="decrementTimer(project.time_interval)"><i class="fas fa-play"></i></td>
-        <td (click)="editProject(project.id)"><i class="fas fa-edit"></i></td>
-        <td (toDelete)='deleteProjectNow(project.id)' (click)="deleteProject(project.id)"><i class="fa-solid fa-circle"></i></td>
+        <td (click)="displayForm2()">{{activity.name}}</td>
+        <td (click)="editActivity(activity.id)"><i class="fas fa-edit"></i></td>
+        <td (toDelete)='deleteActivityNow(activity.id)' (click)="deleteActivity(activity.id)"><i class="fa-solid fa-circle"></i></td>
       </tr>
     </tbody>
   </table>
+  ​
