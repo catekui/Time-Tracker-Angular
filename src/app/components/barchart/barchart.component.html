@@ -14,12 +14,7 @@
                                     <a class="nav-link active" aria-current="page" href="#"></a>
                                 </li>
                             </ul>
-                            <span class="navbar-text">
-                                <button (click)="displayForm()"
-                                class="w3-button btn addproject" >Add Project</button>
-                                <!-- <button onclick="document.getElementById('id01').style.display='block'"
-                                class="w3-button btn addproject" >Add Project</button> -->
-                            </span>
+        
                         </div>
                     </div>
                 </nav> 
@@ -31,15 +26,18 @@
                 <div class="stats">
                     <div class="pink">
                         <h3>Total Hours</h3>
-                        <span>{{ dailyHours }}</span>
+                        <span>{{(data.daily_hours/60) | number : '1.0-0'}}</span>
+                        <!-- <span>{{ dailyHours }}</span> -->
                     </div>
                     <div class="pup">
                         <h3>Average Hours</h3>
-                        <span>{{ averageHours }}</span>
+                        <span>{{(data.daily_hours/60)/5| number : '1.0-1'}}</span>
+                        <!-- <span>{{ averageHours }}</span> -->
                     </div>
                     <div class="pink">
                         <h3>Projects Worked On</h3>
-                        <span>{{ projects }}</span>
+                        <!-- <span>{{ projects }}</span> -->
+                        <span>{{data.no_of_projects}}</span>
                     </div>
                     <div class="pup">
                         <h3>Time Wasted</h3>

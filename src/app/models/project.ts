@@ -9,7 +9,7 @@ export class Project{
 
 
 
- constructor(public user:any,public description:string, public time_interval:number,public break_interval:number, public activity:any, public date_added:any){
+ constructor(public user:any,public description:string, public time_interval:any,public break_interval:any, public activity:any, public date_added:any){
 
  }
 }

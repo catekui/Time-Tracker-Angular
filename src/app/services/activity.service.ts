@@ -6,13 +6,13 @@ import { HttpClient} from '@angular/common/http';
   providedIn: 'root'
 })
 export class ActivityService {
-  base_url = "http://127.0.0.1:8000";
+  base_url = "https://magnificent-timetracker.herokuapp.com";
   
 
   constructor(private http: HttpClient) { }
   addActivity(user:any, activity:string, date:any) {
     console.log(user)
-    return this.http.post(this.base_url + "/api/activity-create", {
+    return this.http.post(this.base_url + "/activity-create", {
       user: user,
       name: activity,
       date: date,
@@ -21,10 +21,10 @@ export class ActivityService {
   }
   getUserActivity(userId:number) {
     console.log("activity service UserId: " + userId)
-    return this.http.get(this.base_url + "/api/activity-list/" + userId)
+    return this.http.get(this.base_url + "/activity-list/" + userId)
   }
   editActivity(activityId:number, activity:string) {
-    return this.http.post(this.base_url + "/api/activity-update/"+ {activityId}, 
+    return this.http.post(this.base_url + "/activity-update/"+ {activityId}, 
     {
      name: activity
     }
@@ -32,6 +32,6 @@ export class ActivityService {
   }
   deleteActivity(activityId:number) {
     console.log( "activity service UserId"+ activityId)
-    return this.http.delete(this.base_url+"/api/activity-delete/" + activityId)
+    return this.http.delete(this.base_url+"/activity-delete/" + activityId)
   }
 }

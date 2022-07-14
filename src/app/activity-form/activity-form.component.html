@@ -1,5 +1,5 @@
 <body>
-    <div class="container">
+    <div class="container text-center">
     <form [formGroup]="activity_form" (ngSubmit)="onSubmit()">
         <div class="form">
           <label class="form-fieldset ui-input">
@@ -7,7 +7,7 @@
           </label>
         </div>
         <div class="form-footer">
-        <button class="btn" type="submit"[disabled]="!activity_form.valid" >{{title}}</button>
+        <button class="btn mb-4" type="submit"[disabled]="!activity_form.valid" >{{title}}</button>
         </div>
       </form>
     </div>

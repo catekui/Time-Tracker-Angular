@@ -8,7 +8,7 @@ import { Project } from '../models/project';
 })
 export class ProjectService {
   user = 1
-  BASE_URL = 'http://127.0.0.1:8000';
+  BASE_URL = 'https://magnificent-timetracker.herokuapp.com';
   
   //BASE_URL = 'https://boiling-lake-72809.herokuapp.com/api/'
   constructor(private http: HttpClient) { }
@@ -35,7 +35,7 @@ export class ProjectService {
      
     editProject(projectId:number,description:string, time_interval:number, break_interval:number, activity:string) {
       
-      return this.http.post(this.BASE_URL+"/api/project-update/"+{projectId}, {
+      return this.http.post(this.BASE_URL+"/project-update/"+{projectId}, {
         description:description,
         time_interval:time_interval,
         break_interval:break_interval,
@@ -53,12 +53,15 @@ export class ProjectService {
     }
 
 
+    getProjects() {
 
-   
-    getProjects():Observable<Project[]> {
-
-      return this.http.get<Project[]>(this.BASE_URL+"/project-list/"+this.user)
+      return this.http.get(this.BASE_URL + "/project-list/" + this.user + "/")
     }
+   
+    // getProjects():Observable<Project[]> {
+
+    //   return this.http.get<Project[]>(this.BASE_URL+"/project-list/"+this.user)
+    // }
   
 
 }

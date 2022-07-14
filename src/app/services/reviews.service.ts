@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient} from '@angular/common/http';
-const base_url = '=http://127.0.0.1:8000/reviews/';
+const base_url = 'https://magnificent-timetracker.herokuapp.com/reviews/';
 
 @Injectable({
   providedIn: 'root'

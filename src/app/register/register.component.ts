@@ -25,7 +25,7 @@ export class RegisterComponent implements OnInit {
 
   submit(): void {
     console.log(this.form.getRawValue()); //
-    this.http.post("http://127.0.0.1:8000/register/", this.form.getRawValue())
+    this.http.post("https://magnificent-timetracker.herokuapp.com/register/", this.form.getRawValue())
     .subscribe(() => this.router.navigate(['/login']));
 
    }

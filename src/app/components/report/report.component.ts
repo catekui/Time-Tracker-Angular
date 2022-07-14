@@ -13,7 +13,7 @@ export class ReportComponent implements OnInit {
   projects: any
   ngOnInit(): void {
     
-      this.reportservice.getUserProjects(1).subscribe(
+      this.reportservice.getUserProjects().subscribe(
          (data) => {
           this.projects = data; 
         },

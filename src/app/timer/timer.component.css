@@ -1,10 +1,23 @@
+
 body{
   background: rgba(205, 180, 219, 0.4);
   width: 25vw;
   height: 30vh;
   padding: 0 1vw 1.3vh 0 !important;
   border-radius: 1rem;
+   
 }
+.h1 {
+font-size: 70px;
+}
+.h8 {
+  font-size: 30px;
+}
+
+h2 {
+  font-family: 'PT Sans', sans-serif !important;
+}
+
 
 .flex{
   display: flex;

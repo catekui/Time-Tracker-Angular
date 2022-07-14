@@ -14,7 +14,7 @@
     
     <label for = "time_interval">Time interval(20-60mins)</label>
     <input type="number" min="20" max="60" id="time_interval" name="time_interval" formControlName="time_interval"  required>
-]
+
   </div>
 
   <div class="form-group">
@@ -37,7 +37,7 @@
 
   <div class="btns d-flex justify-content-between p-3">
     <button class="form-buttons" (click)="clearInput()" type="button">Cancel</button>
-    <button class="form-buttons" type="submit" [disabled]="!project_form.valid">Add</button>
+    <button class="form-buttons" type="submit" [disabled]="!project_form.valid" (click)= "refreshComponent()">Add</button>
   </div>
 
 

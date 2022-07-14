@@ -1,21 +1,19 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway:300,400,600&subset=latin-ext');
-*{
-  background-color:rgb(248, 200, 220);
-}
 input {
-  box-sizing: border-box;
-    border-radius: 3px;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, .25);
-  font-family: 'Playfair Display', serif;
-  background-color: #D8BFD8;
-  width: 100%;
-  margin: 2px;
-  color: #ffffff;
-  font-size: 24px;
+  background-color: #263F56;
+    border-radius: 6px;
+    width: 45vw;
+    margin: 10px;
+    color: #ffffff;
+    font-size: 0.95vw;
+    padding: 0.3vw;
 }
+
 .btn{
-  padding: 6px;
-    background-image: linear-gradient(to left, rgba(255, 146, 202, 0.75) 0%, rgba(145, 149, 251, 0.86) 80%);
+  
+    padding: 6px;
+    background: linear-gradient(101.68deg, #FFAFCC -70%, #A2D2FF 131.87%);
+    border-radius: 8px;
 }
 
 span {

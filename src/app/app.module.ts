@@ -73,10 +73,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
   imports: [
     BrowserModule,
     AppRoutingModule,
-<<<<<<< HEAD
     DataTablesModule,
-=======
->>>>>>> 0e241306f37fffd2abcae2b5f0d813da385cf908
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,

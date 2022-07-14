@@ -1,10 +1,5 @@
-<<<<<<< HEAD
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { FormControl, FormGroup, FormBuilder } from '@angular/forms';
-=======
-import { Component, Input, OnInit, EventEmitter, Output } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
->>>>>>> 0e241306f37fffd2abcae2b5f0d813da385cf908
 import {HttpClient } from '@angular/common/http';
 import {Router } from '@angular/router';
 import { ProjectService } from 'src/app/service/project.service';
@@ -43,15 +38,13 @@ export class ProjectFormComponent implements OnInit {
  }
 
   constructor(private http: HttpClient,private router: Router, private projectservice: ProjectService) { 
-
-
   }
   
   
   ngOnInit(): void {
   }
 
-  newProject = new Project("","",0,0,"",new Date())
+  newProject = new Project("","","",0,"",new Date())
 
   onSubmit = () => {
     // console.log(this.project_form.getRawValue());
@@ -78,11 +71,18 @@ export class ProjectFormComponent implements OnInit {
 
     this.setTimer.emit(this.project_form.value.time_interval)
     
+    
+ 
+   
+ 
  
     // this.newProject = new Project(new Project("","",0,0,"",new Date()))
     this.project_form.reset()
     
     
     
+  }
+  refreshComponent(){
+    window.location.reload();
   }
 }

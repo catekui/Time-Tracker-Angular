@@ -19,11 +19,12 @@
                         </div>
                     </nav> 
                 </div>
-                 <div class="mt-52">
+                 <div class="mt-30">
+                  <h1 class="text-center repo">Report</h1>
                   <table class="table-auto ml-40">
                      <thead>
                        <tr>
-                         <th>I</th>
+                         <th></th>
                          <th>Project</th>
                          <th>Date project was done</th>
                          <th>Time worked on Project</th>
@@ -32,9 +33,9 @@
                      <tbody>
                        <tr *ngFor="let project of projects; let i = index">
                          <td>{{i+1}}</td>
-                         <td>{{project.description}}</td>
+                         <td>{{project.action_done}}</td>
                          <td>{{project.date_added}}</td>
-                         <td>{{project.time_interval}} minutes</td>
+                         <td>{{project.time_worked}} minutes</td>
                          
                        </tr>
                       
