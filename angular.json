@@ -27,33 +27,26 @@
             "tsConfig": "tsconfig.app.json",
             "assets": [
               "src/favicon.ico",
-
               "src/assets",
               "src/assets/bell.mp3",
               "src/assets/click.mp3",
-             
-
-              "src/assets/click.mp3",
-          
-    
-
+              "src/assets/click.mp3"
             ],
             "styles": [
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.css"
             ],
-            "scripts": [ 
+            "scripts": [
               "src/assets/js/timer.js"
-
             ]
           },
           "configurations": {
             "production": {
               "budgets": [
                 {
-                  "type": "initial", 
-                  "maximumWarning": "500kb",
-                  "maximumError": "1mb"
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "2mb"
                 },
                 {
                   "type": "anyComponentStyle",
@@ -120,10 +113,17 @@
               "node_modules/bootstrap/dist/js/bootstrap.js"
             ]
           }
+        },
+        "deploy": {
+          "builder": "@netlify-builder/deploy:deploy",
+          "options": {
+            "outputPath": "dist/timetracker",
+            "netlifyToken": "su-HMHoe8kg2Huw9wFhwojaXrpWQOWGIaWLhzPZt8PQ",
+            "siteId": "\\"
+          }
         }
       }
     }
   },
   "defaultProject": "timetracker"
-  
 }
