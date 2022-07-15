@@ -96,6 +96,7 @@ export class ProjectComponent implements OnInit {
   stopBreak(){
     clearInterval(this.breakInterval);
     this.timer = 0;
+    alert("The break is over")
   }
 }
  // stopTimer using project id
