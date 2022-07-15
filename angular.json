@@ -118,8 +118,8 @@
           "builder": "@netlify-builder/deploy:deploy",
           "options": {
             "outputPath": "dist/timetracker",
-            "netlifyToken": "su-HMHoe8kg2Huw9wFhwojaXrpWQOWGIaWLhzPZt8PQ",
-            "siteId": "\\"
+            "netlifyToken": "_3zSb4ZQPbjxoFWJ5hNyywQhsVbyA0PwPXP95Y6p_9M",
+            "siteId": "98387abb-ec58-4ac9-8c7f-0b4dcf152a60"
           }
         }
       }
